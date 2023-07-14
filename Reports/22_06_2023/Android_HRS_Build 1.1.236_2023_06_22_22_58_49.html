@@ -1,0 +1,1280 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Automation Reports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+            
+                 .report-name { padding-left: 10px; } .report-name > img { float: left;height: 90%;margin-left: 90px;margin-top: 2px;width: 50px; }
+            
+		
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>HRS_POC Automation</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jun 22, 2023 10:58:49 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyAddReminderModalGeneralDisplay</span>
+						<span class='test-time'>Jun 22, 2023 10:59:12 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 22, 2023 10:59:12 PM</span>
+	<span class='label end-time'>Jun 22, 2023 11:04:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 4s+742ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf fail' status='fail' test-id='2'>
+		<div class='collapsible-header'>
+			<div class='node-name'>[T2894308]</div>
+			<span class='node-time'>Jun 22, 2023 10:59:12 PM</span>
+			&middot; <span class='node-duration'>0h 5m 4s+742ms</span>
+			<span class='test-status right fail'>fail</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>10:59:14 PM</td>
+							<td class='step-details'>
+									Sing In is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>10:59:14 PM</td>
+							<td class='step-details'>
+									Clicked on Sing In
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:25 PM</td>
+							<td class='step-details'>
+									Typed the value Ivin.mod into UserName
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:27 PM</td>
+							<td class='step-details'>
+									Typed the value Password1!!!!! into Password
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:27 PM</td>
+							<td class='step-details'>
+									Login  is clicked
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:00:50 PM</td>
+							<td class='step-details'>
+									Clicked element Add Patients
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:52 PM</td>
+							<td class='step-details'>
+									Typed the value Bbyaq into User First Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:54 PM</td>
+							<td class='step-details'>
+									Typed the value Wwfxsem into User Last Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:56 PM</td>
+							<td class='step-details'>
+									Typed the value 05/30/1993 into User DOB
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:58 PM</td>
+							<td class='step-details'>
+									Typed the value 436920 into Patient ID
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:00:58 PM</td>
+							<td class='step-details'>
+									DropDown  is clicked
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:01 PM</td>
+							<td class='step-details'>
+									Typed the value Test  into SSN Value
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:03 PM</td>
+							<td class='step-details'>
+									Typed the value text into Custom Text Value
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:03 PM</td>
+							<td class='step-details'>
+									Save  is clicked
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:15 PM</td>
+							<td class='step-details'>
+									Care Plan  is clicked
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>Healthy</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									Healthy Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>cond1</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									cond1 Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>cond2activity</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									cond2activity Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>cond3bpox</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									cond3bpox Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>cond4med</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									cond4med Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									<b>cond5gmps</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:19 PM</td>
+							<td class='step-details'>
+									cond5gmps Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>cond6abgm</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									cond6abgm Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>cond7img</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									cond7img Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>cond8stw</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									cond8stw Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>cond9aimgt</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									cond9aimgt Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>condition10</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									condition10 Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>condition11</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									condition11 Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>condition12</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									condition12 Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:20 PM</td>
+							<td class='step-details'>
+									<b>Hypertension</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Hypertension Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Oncology</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Oncology Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>MainThree</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									MainThree Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Some Preset Thing</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Some Preset Thing Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Vape Lung</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Vape Lung Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Wacky Hair</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Wacky Hair Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Activity_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Activity_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Bp_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Bp_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									<b>Glucose_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:21 PM</td>
+							<td class='step-details'>
+									Glucose_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Medication_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Medication_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>PulseOx_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									PulseOx_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Survey_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Survey_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Temperature_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Temperature_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Weight_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Weight_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>WI_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									WI_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Stethoscope_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Stethoscope_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Steps_preset</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									Steps_preset Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:22 PM</td>
+							<td class='step-details'>
+									<b>Activity</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Activity Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Blood Pressure</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Blood Pressure Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Glucose</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Glucose Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Medication</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Medication Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Pulse Ox</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Pulse Ox Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Survey</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Survey Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Temperature</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Temperature Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Weight</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Weight Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>Imaging</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									Imaging Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									<b>PatientConnect Voice</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:23 PM</td>
+							<td class='step-details'>
+									PatientConnect Voice Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:24 PM</td>
+							<td class='step-details'>
+									<b>Stethoscope</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:24 PM</td>
+							<td class='step-details'>
+									Stethoscope Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:24 PM</td>
+							<td class='step-details'>
+									<b>Steps</b> is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:01:24 PM</td>
+							<td class='step-details'>
+									Steps Button rgba(255, 255, 255, 1) And rgba(255, 255, 255, 1)  Color Code is  matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:01:54 PM</td>
+							<td class='step-details'>
+									Activity Reminder  is not displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:02:24 PM</td>
+							<td class='step-details'>
+									Survey Reminder  is not displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:02:54 PM</td>
+							<td class='step-details'>
+									Wieght Reminder  is not displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:03:24 PM</td>
+							<td class='step-details'>
+									Medication Reminder  is not displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:24 PM</td>
+							<td class='step-details'>
+									Save Button is displayed
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:03:24 PM</td>
+							<td class='step-details'>
+									Clicked element SomeThing Present
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:25 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Activity  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:26 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Weight  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:26 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Medication  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:03:26 PM</td>
+							<td class='step-details'>
+									Clicked element Survey
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:27 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Medication  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:28 PM</td>
+							<td class='step-details'>
+									Save Care Plan  is clicked
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:32 PM</td>
+							<td class='step-details'>
+									An error occurred while saving the Care Plan Metrics. Please try again later. is displayed and matched
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Some Preset Thing  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Survey_preset  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Activity  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Weight  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Medication  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>11:03:34 PM</td>
+							<td class='step-details'>
+									rgba(243, 152, 52, 1) And rgba(243, 152, 52, 1)  Color Code is  matched Color Code Equal To  Survey  Button Color as been changed and Activated
+								
+							</td>
+						</tr>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>11:04:17 PM</td>
+							<td class='step-details'>
+									verifyAddReminderModalGeneralDisplay is FAILED
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:04:17 PM</td>
+							<td class='step-details'>
+									Session ID: be96c159-8168-4041-ab25-b1c5213889ac
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>11:04:17 PM</td>
+							<td class='step-details'>
+									Session is quit
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<ul class='screenshots'>
+					<li><a href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAN1CAYAAACesuZ/AAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9wl+WdL/x3ukkQYhBUiG2YWZAaCv62Vumptke7Bdy22Io7PnarVkcFdbt6HO26VXl6QFe3sj3t9qCkMrb2h9ZZtZXSFXCVVmyFVlF+FA9xKp5nSGuCCoKBktDm+eObQAjhp4GQL6/XTMbk/l73dX3uG0xn+vZzXSW/WPRia7rRq6vqc+VFn+3OKZMkzcu+ny9/bVHWtCRlAyozoHxT1jVuSUuSsjMvyQO3jk5FkmR1fnbNXfluxfmZMW1MBnd7JS1ZdM8N+dcFJ2XKrIk5Yafj3sjcm6amti5JWd8MGljadn1L1jVuSkuSlFXmnJtvzpdHH7UPdezv54Teb+YjP8txw6q7dc799TsOAAAAAAA4uO2P3OHUD32wW+dLktLdDzkYrM7cewvhb801t+fu844pXF5bl59968dpubA9/E3SvDp19Ulq9l8t9Sv38pZPXpLaa0/ucOGtvHTvN3P3nLcz/1/uStmdUzLpxH57N+d+f04AAAAAAACgt3lfTxewR9auyK/qk6Qq55x2zLbrA2vy2a9NzgUjOoxtXJ26/VlLc0NWNb7XSY7Kqdf+c245t2+STZl3z6PZ20x5vz8nAAAAAAAA0Ov0jg7g5vZvGjJ/0eqMHT+ki0Fv5Zk778kDizdkY5LUPZFJ459IUpWJ90/O2Kok2ZjVzz6RBx5emN/Vb0lLWWmqR386N14zJsMOb5tmWW0uuHVpysZdlwfGrc6Me36eX9VvSc01t+fyxm/mX2dtyLokydJMHn9dkmTMndMz6cS9fah+OfXiMal55onUrVuU+csuzYi2OZpWL8zjM3+eucvezsaWpF/1yFxy8xUZe2y/PXzOpOm1Z/LAzP/Mc8s3pSWlqT5tdK64/uKcOnBv6wQAAAAAAAB6i97RAVw1NDVtezzXzbwrF11zT37wdF0amzsOKktFRVJR3v5jaQYNrsygwf1TVp4kLXnpm/+cf5z2XF6uTyoGV2ZAtqR+wRO55Wvz0rmpt+Xp2lxxwxP5TVPfDBpclTNGHJPyin4pq2jPzEszYHBlBg2u3LbmXj/XcTmj7fDe5xYW+nmbX6zNFdf+ID9Z/HZaKiozaEBpNta/ktqbv5m5DXvynEnTstp8+YbHMn/5pmRAZQYNSOoXP5ep19dm+bv7WCsAAAAAAABw0OsdHcCpyUVfPSnP3bo065K01L+en3zrW/nJvaWpGT8xt182KhXpnzNvuDvDnpySSfc1JMM+nanTxmTw1jnKcurFF+fzQ0ozdvzpGVye5N0X8u2rvpv5dfMye+WYXNFxK+mWLRnW8bzhJDl2cmpHFDqEk1G5cebEnPCenqtvKgYkaUw2tmxKkpR/+PzcOOGolI87P6dWlSXZmJe+OTlTn6nPD2bVZexVNbt5zhV55F8K76njecmNT/5Lvnzf0tz9cF1+eJWDgwEAAAAAAKAY9Y4O4CQVJ07Mt785IefUlKas/WLLltQ9Nj1fvn8PT8OtGp1LLmwLf5Pk8CGpqU6STVm7tmX7sYPPyT90DH8PmGNy5mUXtoW/SdIv1SP6J0k2rns7zTu/sWDlC3mmKUnFmbm8Q/2DzxuTs5JsXLQ0q/dD1QAAAAAAAEDP6yUdwAUVx56bL087N19ufiMrF8xL7b2L8npLsm7Oc1l+Vc2edeM2v5HlT8/P/EWvZvnqjWlaW7i8Zu1bSToEvgP6Z193dt5zm9JUOFA4/cr6drjeksZl8zP36SV5aflbaWraULjcsD7rkg7dvjta+9rqwtnATYvyz+MX7Tig8a2sS9LVKcoAAAAAAABA79arAuCtyo/JiE9emm8MSb5486JsbFmd+obkhKpd39b47Ddz+7dezZqWXY87YBpezW/aDh8+a3TbtswNC3L3rT/een1vVQzsn6S+cDbwwL5dDDgqFfs2NQAAAAAAAHCQ60UBcEuybfPnggH9MzjJ66lK9W7C37y7IDOmvZo1OTJjbroiF4weksHlb2XuTVNTu4c7SHevjXnp4XmpS5IBZ+acE5NkfZ67rxD+Vo+7JDdOOCnDqvqlsf283z1QPrB/+iXZOPDs3D7zQp2+AAAAAAAA0MtddtllefDBB/dobO84A3jtgkyZcENuvPeFbGuM3ZiVs17M60nKzv5w2vpnU1HR1vXasjFJ0tzc1u5bv6oQtg4elbEfH5bB5WXJu6tTV7+XtZT3Tb+2b1uSpHlf2onfykv33pW7n9mUpG/G3HxhRiRJ3kjdyiSpzBnjRmdYVb8k61O/cv0OM+z0OUecm4uqkzTOz/+e1fG03/VZ/ewzeWntPpQLAAAAAAAA9IjLLrtsu3/uTq/oAF69cH5+15K0zPluJj39g8LWxk0bsqYpSVl1Jl56+tbzeiuOHZbqvJ76VU/lyxOeSkuG5saZN+esYaNyatmi/Krxudxy8ZIMqNiUdY3JgMF9k6ZNe15M+zwtSzN1wnUpa+mbsfdMyxUjdnHP0z/IxMUPt/2wJesaNxXC47LKnHPzzZl0YnukPCzHn5bMXrAhP7n5+jw3sG+a1m5Iy8DKQldvhyl3+pwDh2TstWdm9tcWpW7mXbno4coMqEia1m7Ixpak7LRkxtfOzcA9f2IAAAAAAACgB3QOffekE7hXdAAPOW9yHrj3knz+tKoMKt+SNY0bsqa5b44/d0L+7cGv5tyO2z8P+dvceOXQ9CtLWlpKM2BEVeHM2/LTM+lfzkpNRdLStCHrmqsy9v+dnNqvfjgD9qaY8tNzxc0npbosSUtSVj001WUbd31Py6ZCzY0bsqZxUzKgKqd8dkL+7cG78+XRR3UYWJYzr7kun68pTVnLlqxZuyXDxl2eGTMnZmznInf2nEnKT7w0tfdens+fdmTKmgvrtlRU55zrr88Dwl8AAAAAAAA46O2s43d3ncAlv1j0Ymt3FvLqqvpcedFnu3NKgH0y85Gf5bhh1d06p99xAAAAAABwaNofucOpH/pgl9f3ZLvnnXUC94otoAEAAAAAAAAOFbvb5nlXesUW0AAAAAAAAADsngAYAAAAAAAAoEgIgAEAAAAAAACKhAAYAAAAAAAAoEgIgAEAAAAAAACKhAAYAAAAAAAAoEgIgAEAAAAAAACKhAAYAAAAAAAAoEgIgAEAAAAAAACKhAAYAAAAAAAAoEgIgAEAAAAAAACKRGlPF7B33sjcm6amtm7blTF3Ts+kE/fwnnFX5/FrT97pyOX3XpfJr52fGdPGZPBO1qu55vbcfd4xO968rDYX3Lq0w4WTMmXWxJywi8q6db2ajvN0tBdzNszLLVc9kW1DqzLx/skZW7WLhwAAAAAAAAAOGr2oA3hJZoyfmtq6kzJl1vQ8Pmt6poxL5t16XW558o2d3tX45HdSW1cIincV/qZhXn44pyoTb24PUdvXq8rE+wvrzbimKnX3Tc0F9y7ptMaUQhg77uo8Pmt6Hp91dcZkaSaPn5K5DftvvZprbi+sd//5qal7IpPG12Z5l+9s93NmWW0uuOqJ1NWcnxmzpufxWbdnYk1Daq+6LjOW7fy1AQAAAAAAAAePXhMAL7/3O5nXqav2hGsLIXDdfd/pOmhdVptJ9zUk467eTZdw0rh4YepqRufUtm7XxiefyLxOHbCDz5ucGddUJXOe6LDekjzetsa2gPnkTJp1dcakIbWPdQpa3+t6DfPyjfsatu/irRqTu+8/PzVZmskdgt09f4Y3MvfBpZ26iI/J2Gm3Z2JNMm9B188AAAAAAAAAHFx6SQC8JM/NSWquOX+HLZVPmHB+atKQ+Ys7dwEvyYxb20LNXXX+to19/L6GjLls21bMLz3dkIw7f4ftjwcPqUrSkFWNbReWLSyErBM6r1GVYTVJXmtIYzrb9/UaFy9MXU7KFztv4Vw1Jl8cl2TOwrYu4L14hoalmV+XDvW0OybVx+7sGQAAAAAAAICDTe84A3jZwsxLMmZIF+fWVp2Uc2qeSO2qhiTtn7+RuTe1dQx3eS5uV/OflClbu4SPydhp0zO2i6GNqxuSVGVY+6QnTszjs7qatCGr6pKMq9px/X1ery3UrRnd5TOdcPZJyZyG1DckJ1TtxTNUjcnds8Z0MfKN1L+W5NgungEAAAAAAAA46PSKDuAdAsuudOhSLZz7W5WamqWZPP66XND21fVZtoXtj7vqLt5R23bPHbZu3mnNTz5RCK3P7twZ/F7WawuVdxnIdujsfY/PsPzetvODd+huBgAAAAAAAA5GvaMDeK+0BZxJ8snb8/i0Y1LoCJ6a2luvy+sdz85N2rY/rso5N3fRXdxJ4RzirrZK7qTtnN7UnJ8LOp89vD/W2wu7n7PtXdUl6XTmMgAAAAAAAHBw6xUdwHulfbvoO6d3CHqPydhpt2diTVJ33xNtZ+QWLH/sidR1cU5uZ41PTsnkOUnNNbdnUudQdztLMuOqJ1K3k+2nu3+9Pbdncxa2jn581vRMGVfooL7lyc7nKwMAAAAAAAAHo14RAA8eUpXdbm3cti1yYbvok3LWDgHnMTn1k4V56hvary3Jc3O62qZ5e41PTsmk+xpS07l7eAdLMmN829nDXXbOvtf1qjKsJtttd72jrrfK3vNn2OaEa6dnyrgdQ3MAAAAAAADg4NQrAuCcODpjkry+uotO1IalmV+X1AzbTUttFxqffCLzutqmebsx3RX+dsd6bSF23aouA+DlC5YmqUp1p1exJ8/Q2NB1l+/gYZ1DcwAAAAAAAOBg1TsC4Jycs3bSibr8sSdSl6qcc1oh2Bx82ujUZGmeW9Z5jjfy0tMNSc3onFq17eeaT5600/N124PTjLt6D8Pfqky8f2dn5nbPeu3P98PO2zI3zMsP5yQZN3q79fdkzsYnp2TSVVO73Oq5cVVDugqVAQAAAAAAgINPLwmAkxOuvTpjsjSTx9duDYGX33td25m2V287U7dqTL44Lpl363WZsTUEXpIZ46emtq4qE29uO5d32ROprTspX9xVKNoWnD5+7a62bO4Y/k7e+dm+3bVe1ZjceE1V6u7rENg2zMst7ecOd7h3T+ccfN7ktq2eO4bAb2TuTYX3O+bOnYXaAAAAAAAAwMGk5BeLXmztzglfXVWfKy/6bHdO2cEbmXvT1NTWbbsy5s7pmdTFlspbw8+ttt+aefm912VydhaMtoe6O9e+nfKO63RWWDfdtN5Wy2pzwa1LOww4PzOmjenQXbz3c+74LLsJteEgN/ORn+W4YdXdOuf+/R0HAAAAAAAcrPZH7nDqhz7YrfMlvS4A7iYN8zJj8UmZtMttnXvxekASATAAAAAAANB9eksAXNrtM/YGVWMy6bwiXg8AAAAAAAA4JPWaM4ABAAAAAAAA2DUBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAAD7KHW1tYcXtG3p8sAAAAAAAB6QGVF37S2tvZ0GbslAAbYQyUlJdnS8uesf7epp0sBAAAAAAAOoHc2NKVly59TUlLS06XslgAYYC/06VOWt9et7+kyAAAAAACAA+jtde/ksPKyni5jjwiAAfZC5eH9snj5yp4uAwAAAAAAOIBeXF6Xysp+PV3GHhEAA+yFvoeVp7y8LL9YuLinSwEAAAAAAA6A+c8vzmF9ynJYn/KeLmWPlPZ0AQC9TeXhffPOhqY8+uT8fPjED+XII/rniMqKni4LAAAAAADoJu9saMrb697JC8v+Tw7rU57+vaT7NxEAA+yTIyor8qc/Nee3S1akuWVLykr/KhuaNvV0WQAAAAAAwHtUWdE3LVv+nPLy0hxRWdFrOn/bCYAB9tFhh5XnsMMKv/RbW1tzzOAje7giAAAAAADgvWptbU1JSUlPl7HPnAEM0A168/8QAAAAAAAA2/T2/89fAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEWitKcL2FPL770uk+fseL2sojI1p52eCy49P6dWlR34wpI0vfZMHvn+c3luWUPWtSQpK82gIUNy1oSLc8HHh6SiR6oCAAAAAAAADjW9rwO4rDSDBldu/Spr3pDfLZifqVfdlNtnrUrTAS3mjTx35y254obHMntxQ9alb6Gu8i1Zs+r1/GTaXbnia89k7QGtqWvNC/93Lhp/XWYs6+lKAAAAAAAAgP2l13QAbzXs05k6bUwGb72wPquefCBT73s1v5s5LVPLbs/d5x1zAArZmOX3Tss3Fm1Kyo7MmK/ekEkfPmrrp02vzcu3vzYvAyacnYEHoJrdaVy9Oi09XQQAAAAAAACwX/W+DuAd9M+w827I3VdWJUnqZv4gzx2AltvmZT/I3XM2JembMV/75+3C3ySpOHZMbvn+tEw6sWe2pd5eS+pXbejpIgAAAAAAAID9rPd1AO/E4PHnZ8yD38m8ltcze+EbOau9C3jtisx98Kd5ZEF91rUkZQOqM/b6ibniw0clWZXHr5mWH9Ynp9x0VyZ/vP+2Cd9dkLsv+3F+01Kdf3jwqzl3uzbelrw0Z2k2JskJf5uLTuy3Z0W+uzrPPfz9PDCnrZaKI3P8uPMz6bLTt3Y0Nz45JZPua0jGXZ3Hrz15663tZyDXXNPe4fxG5t40NbWrjsuNMy9JxaPT829zGrKxpTTVZ386N14zJsMOT7Ly4Uy8c2HWrCvMM+/W6zIv2WF+AAAAAAAAoPcrgg7gdqNy6ujCd3WLXi2cBbz6p7nxyumpfaY+TeWVGTS4NFlXn9n/867MWNaSZFjOubA6SfLyw/OyusNsaxctyG9akrKzx+SsHfZwfjUvLSx8N3T0qD3b4vndJZlx7V35xs/qsy6lbecXv52XH/tuvnzTvDTu62O3vJpvXzk5U+e8lYqBfVOWLalf8ERuuW9h4R2UlaWivCztfchlA9rOT644GDqTAQAAAAAAgO5URAFwWSoq2r59d1Mh/BwyJhOvPCv/cM9deeThu1M781v59pVVSTZl3mOFgHTg2efmY0lSvzDzVrbPtT4vPV2fpG/Gjj895Z2XevetNLYdqFszbM/OG1758A8yb11SVvOp/Ptj30rtzLvzwwevzpgBSUvdE5k6a/XuJ9mZEee3zTktj9x7TqqTtCxYkJfeTXLshfnGzEtyTtvQc26+O7Uz707tZaP2fT0AAAAAAADgoFREAXBX+mXEeRfn3BHbtnYePKxwVnBWN2RtkpR/OGednSSb8syzKwqfNSzMvOVJKk7Kx0Z0Rx11+dUzm5IkZ138uQxpv3z4ybnkyqFJkvqnX9jnLuBzLh6zbc4hx+X4JMmmNDXta70AAAAAAABAb1Q0ZwAnLdsCz8P7pqLD9bWvvZj5c17IS4tXp7G5EMSm8a2sSzIkZTlz/Jnpt2BRNs55JosuG5XqRQtSl6T64nPTZf57+FEZXJakJalb9UZy4m66gNe+nrqmJKlKzZDtP6oY2BZOr2pIY7L1LGAAAAAAAACAvVVEAfCKrefy1px5XCEAfndFfnBrbX6yasuubx1xbi6qXpTv1r+S5xbXZdist5NU5/NnD9nJDUNywonJvMXJ6wtXZO34Y/bsHGAAAAAAAACA/ahotoBunPVE5rUkKRuaz4wudOSufPiB/GTVlvQ77ZxMufee/HjW9Dx+50ld3D0kZ11YnST51cwHMrcxKTt7TM7aaarbP2eMG5myJFn+n3lkWcuuixs4NDUVSdKQuk5H/TatXV/4pmbY9t2/zbuZEwAAAAAAAKCTIgiA12fVk9/MLTMbkiQ1V17SFtyuz5r6wnbPJ5z7tzlhSL+UpyWrVzV0OcvAs8fkY2VJGjdkTfpm7PjTU76LVctHX5grapJkU+Z97Z48/tr6Dp+2ZO2y7+fGCTdlxrKNSWrysXP7Jkmee/in2ZoBv7skP5j5epKk+uOjMjjJ4MFtZxQvejEvvds2rmFh5i7ci1eyg74pb9sTu6W5UF/ze5kOAAAAAAAAOCj1vi2gV/08t1/5zNYfm9ZuyMaWJCnN8VfekFvOaz+Pt3+GnnZksvjt/GbaP+eK7/dN1m5I08DKDEiyrvO85afnM+N+nF/9bFMyeHTGdHn4b0fHZOzXrkv9rdMze1V9fnjDP+eRisoMqEha1m7IuvYG3sWr03xiTUZcfEnGLPhO5tU9lX+cMD+DBvbdWntZzfm5fXzbdtMnnp0xA5Zm3rqlmXrZTRk0sCXrGrek0G68r4bl+NOS2QuS+f/zujxXllSMuz4PXFXzXiYFAAAAAAAADjK9rwO4ZUvWNG7Y+tVSXpnjzz4nt98/LVPHD0tFh6FDxl+XG8+uTFm2ZN3aTakYfX7u/uZXc8WZXU9dUVXo0q0ePzo7O/13O4ePyhXfuiv/ftNZOWVY36SpUNO69M3Q087KjffelW9cVlPoJD785Ez6/pTc/tnqDMiWttqPzCkTLs+3p43Ztv1z+ahMuuf/yceqS1PWsinrmvrnjGtuyoybR76HDLgsZ155Sc6pbsv7y4/M8UPK0rTP8wEAAAAAAAAHo5JfLHqxtTsnfHVVfa686LPdOeUBsiIPXDw9s5uq8w8PfjXn7vT8X6C3mPnIz3LcsOqeLgMAAAAAAKBLp37og90+Z+/rAN5P1j7908xuSsrOHtN2hjAAAAAAAABA7yIATpKsyvxH65P0zdjxpxe2bAYAAAAAAADoZUp7uoCDw7BccN/0XNDTZQAAAAAAAAC8BzqAAQAAAAAAAIqEABgAAAAAAACgSAiAAQAAAAAAAIqEABgAAAAAAACgSAiAAQAAAAAAAIqEABgAAAAAAACgSAiAAQAAAAAAAIqEABgAAAAAAACgSAiAAQAAAAAAAIpEaU8XsHfeyNybpqa2btuVMXdOz6QTe64iAAAAAAAAgINFL+oAXpIZ46emtu6kTJk1PY/Pmp4p45J5t16XW558o6eLAwAAAAAAAOhxvSYAXn7vdzIvJ2XKrIk5oe3aCdcWQuC6+76TuQ09Wh4AAAAAAABAj+slAfCSPDcnqbnm/K3hb7sTJpyfmjRk/mJdwAAAAAAAAMChrXcEwMsWZl6SoUOO2fGzqpNyTk1St0oLMAAAAAAAAHBo6xUBcOPqhiRVGTZ4F4Nea0jjgSoIAAAAAAAA4CDUKwJgAAAAAAAAAHZPAAwAAAAAAABQJHpFADx4SFWShqza1R7Px1ZlVztEAwAAAAAAABS7XhEA58TRGZPk9dVv7PhZw9LMr0tqhlUd8LIAAAAAAAAADia9IwDOyTlrXFJ33xNZ3umT5Y89kbpU5ZzTjumRygAAAAAAAAAOFr0kAE5OuPbqjMnSTB5fuzUEXn7vdZk8J6m55uqM1QAMAAAAAAAAHOJKe7qAPXdyJs26PcNumprJ46/benXMndMz6cQeLAsAAAAAAADgINGLAuAkOSZjp03P2J4uAwAAAAAAAOAg1Gu2gAYAAAAAAABg1wTAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAPeAvf2nt6RIoAv4eAQAAAAAA0FlpTxdwqNjyl9Y8+cfkuTeTjX9uzVube7oierujypN+pa056+jkvPcnpe8r6emSAAAAAAAA6GEC4ANgy1+Sm15OGreGvoI63ru3mgtfD/9/ydMNrZl2SklK9fQDAAAAAAAc0sRFB8DchqThT7brZf9p2JzMeaOnqwAAAAAAAKCnCYAPgGcbW1NS4lWz/5TkfVmwxn9kAAAAAAAAcKiTSh4AG/9ckkQ4x/7Umo1/7ukaAAAAAAAA6GkC4APgrc3CX/a/tzbvfgwAAAAAAADFTQAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABForSnC6CbvD+5f2hJKjpdbnqnNVet6JGKetS4UcmlR5Ts9PND9b0AAAAAAABQ3ATARWDiySX5RL8kac0vn09qO14/oiQPfaQ13/9tMqcHa+wu40Yll1Zkj5+nvrE1N/9+v5cFAAAAAAAABwUBcC/XHv52FXTWLmndGgYDAAAAAAAAxc8ZwL3Z+5PT+yXZeOh0uf512c63dQYAAAAAAIBDnQ7gXmzi4JJUpDUrGvfyvq1bRrfZ2JovLNl+zG0fKclfN7XmqrXbny28w9m5O5w9vP021EmS4clDgzsEt1s6bUk9PHlocPLL55NsV1uHubaboySXfjS5NN20xXPn+rp4hq3vY3OHse3vrUP9gz5SklGlhTlWvJ7c8cfCvaPa/03r/OwAAAAAAADQjXQA92KDygv/XPPHPb/nto+U5BP9WrPi9dZ8xotGAAAgAElEQVR84fnWfOH11jT1K8lDH0nGdRpbcURJHhqavPB8YewvNxau3TO8bUB7+LulNd/fOqYknzh52xwTTy7JQ4NLUt/Ytt7zrVnRFuBO3G61knzioyU5vaVDXSnJJ9rr+n0K925JIURtm+u9hr/jRhUC3aZ3OtS3pSSf+Ghy2/u7eB+Dk1+2jds+NC/ck9Xb3sOoocn9bcHxF55vzRcaW5PSklx6cgAAAAAAAGC/EAAfQsaNSkaVbutMTZL8Mbnq9dY0lZZkwqhON2xpzfc7dMLWLmlNfZLqw9su9EuhA3n1to7W2iUdgtG2Lao7d+ne8dvW1KckHxye7dQ3dugu/mPy2DutSWlyeqcgdm9UDy7JQx/t9NUewL4/mXBEyQ5dzXf8thACjxrSORTvort5u/q3vdfCuypJRXOHuX+f/HJjkn6dw28AAAAAAADoHraAPoScXlGSbGnNC507hv+Y/N8hyaiKQuC5q+2J39mSVLf/sDFpSklGDW3NbekQKrcZNzCpSFIxuNA521lTn13XO2dzYZvn92JXW0QX6mvNirU7fvZCU2tGHVEIn+e0P9eW5P++x3oAAAAAAABgfxIA92JrmpOUJoPen2QvtoHuNn9Mrvpja+GM26HJQ0PTxRm3nTqOAQAAAAAAgP3GFtC9WO27rUlKMqqL7toD6Y7fdji3t7Qkl7ad2ztnc8/WBQAAAAAAAIcaAXBvtvVM2ZLcM3wnY96fTGw7Q/eFpp2cqfv+5K9Lk6amXW//vFt/TF7Y2OHn9i2iezig3pk5awv1/fXAHT8rbJedHbfLBgAAAAAAgIOYALiXq13SmhVbkurBJXmorfO23W0fKclDQ0vyiaHJxCRzViT1KWzXfFt7CPz+5P6hJalIa15YsZeLD08e+miHuYYnn+jXIUj+Y/LYO61Jv5I8dPK22yaeXJKHPrqL0HoX2re9Pv39ybhRHdbeF22BdcURJbl/1LbLt32kJKNKk/q332MgDgAAAAAAAAeYM4CLwB2/bS2EsYNLculHk0u3frLj+bs3P9+aiScXQuGHhrZd3NiaLyzZ+3UnJvnlxu3nanqnNVd1CJLnrEjmDG/NQ4NL8tBHt6/rhb1fMrWNrTl9aCHEHpUkZa3v6fzj2iWtqW17dx3r++XzSe2+TwsAAAAAAAA9ouQXi15s7c4JX11Vnysv+mx3TtnrfeH5bn3FsFMPfbSkp0s4qMx85Gc5blh1T5cBAAAAAADQpVM/9MFun9MW0AAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAAAAAAAAABFQgAMAAAAAAAAUCQEwAfAUX1KeroEDgH+ngEAAAAAACAAPgD6/VVrEuEc+1NJ298zAAAAAAAADmUC4APgI0eWpDV/6ekyKGKt+UvOONJ/ZAAAAAAAAHCoEwAfAJ+rTvqX9nQVFLMjSpPzq3u6CgAAAAAAAHqaWPIAKH1fMv3DJfne68nv3km2/KU1bzXr1uS9Oaq8NaXvK8mo/snlw0pS6j/nAAAAAAAAOOQJgA+Q0veV5MpjC9//5S/J+94nAOa98fcIAAAAAACAzvQM9gChHd3B3yMAAAAAAAA6EwADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECR6NYAuLW1NYdX9O3OKQH2WWVF37S2tvZ0GQAAAAAAAAdMtwbAJSUl2dLy56x/t6k7pwXYa+9saErLlj+npKSkp0sBAAAAAAA4YLp9C+g+fcry9rr13T0twF55e907Oay8rKfLAAAAAAAAOKC6PQCuPLxfFi9f2d3TAuyVF5fXpbKyX0+XAQAAAAAAcEB1ewDc97DylJeX5RcLF3f31AB7ZP7zi3NYn7Ic1qe8p0sBAAAAAAA4oEr3x6SVh/fNOxua8uiT8/PhEz+UI4/onyMqK/bHUgBJCmf+vr3unbyw7P/ksD7l6a/7FwAAAAAAOATtlwA4SY6orMif/tSc3y5ZkeaWLSkr/atsaNq0v5YDDmGVFX3TsuXPKS8vzRGVFTp/AQAAAACAQ9Z+C4CT5LDDynPYYYUgprW1NccMPnJ/LgccolpbW1NSUtLTZQAAAAAAAPS4bj8DeGeEM8D+4vcLAAAAAABAwQELgAEAAAAAAADYvwTAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJA5YANza2nqglgIOMX6/AAAAAAAAFJTuz8k3/Wlz1m/YmM3NW1Je9lfZ0LRpfy4HHKIOr+iblpY/p095afpXVqTvYeU9XRIAAAAAAECP2G8B8Dvrm9Ky5c8585TjM/CIyvQ/vGJ/LQWQ9e825e116/PCsv+TlpaW9K/0OwcAAAAAADj07JcAePPmlhxReXg+ceap+2N6gB30P7wi/Q+vyNAh788vFi7Onza35LA+ZT1dFgAAAAAAwAHV7WcAb/rT5jRt/JPwF+gx/330aXm3aVP+9Kfmni4FAAAAAADggOr2AHjDuxtz2gkjuntagL1y2gkjsv7djT1dBgAAAAAAwAHV7QHw5s1bMvCIyu6eFmCvHHlE/2xubunpMgAAAAAAAA6obg2AW1tbU1b+V+l/eEV3Tguw146orEh5WWlaW1t7uhQAAAAAAIADplsD4JKSkmx4d1N3Tgmwz9a/uzElJSU9XQYAAAAAAMAB0+1bQAMAAAAAAADQMwTAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEWiFwTAb+axy0/JccN3/3XFY2/udrY1j11bGH/5rKzZ5cBZuWL4KTlu+D15uduepStLc0db/Xe8tK9zbM7vH7sjF555Ro4bfkqO//rS7iywh23Is1MvyvEjL8o9L23u6WIAAAAAAADgoNYLAuCk/9EjMnLktq+jywvXyztdH1TZs3VuZ/V/5MI9DKXfq/XzJmf8Vx7NkjeTo0eOyClDDqYXsYd29r7W/CoPf29lmptX5juzV/ZMbQAAAAAAANBLlPZ0Abt3dD51zyP51Naf38xjl/9Nbnk2OfMr0/PAhKN7sLad2/z7lVmS5Oz9vtKbefbhuWlOcsEDC/Kvn+iz31fcH3b6vgZ9LBd/aUSefSj50mdG9EBlAAAAAAAA0Hv0ggC4d1pdv+wArfSHvLIwSU7PGcN7Z/ib7Op9Vebjtz+S391+QMsBAAAAAACAXqlXbAG9597My4/dk2s+dXbhnN9TPpdrZryw07N+16yYldsnFMYef+a1+d5LG/ZolTULf5QbJnwyxw8/JceN/GSumDonv28/nnbN/PzTZz6Z8bcXtite8JW/2bMzhzuv8di1OW74GfmneW9mzcIHckXb+b6nTbgjj7Uv9tI9OW74pflOc5K8kFs+0XYe8tRtZwBvXv2r1E76XE4bfkqOG35GPjrhn/K9hW92sdYpuWL29msVziRuO6P4Uz/KijUvpPbywnOf9oUfZcXmJGte2Db/KZ/LNd9dmvXbzb45q3+5/fu68LZZe/G+tp0B3fmM5DUv/Udub593+NkZO+mezF7R8c+w7d6Rk/PUmjezaMa1+ejIwtjtagAAAAAAAIAiUUQdwH/IY1/4XG5Z1JyUH5WRI0dkze9X5r/uuTKvrf9+Zn3lpGzXH7vwjvzdZ5P+I4dl5NGr8sqbv86dF16bPvN+kIuH73yV1Y9dm7Ff+XWaU56jR47IoDWrsuB7t2T8a82Z+93xGdKnPOU5Ov3L38qbzYVziocPSnL0vpzL25zZX/l8Zm/YnP4jh+XYzSvz2suP5pbPJINevi0fH3JiPj3yqDz1yltpTlJ57IgM6ZNkSOHuzS/dk/EX/iivpe285EFv5vcvz82dfz8/z379p3lgwge2W23RbZ/Pf29ba+SgE/Pxju/htW/l7z7enD5DRmT40RvyyqJ78nc3/yEXvPKj/HjN0IwceVR+/8rr+a87Ls0N/f+rbWvuzVk09W/yxe9tSFKZY0eOSFavzJKHJ2d8fXl+8d1xGbSP72vbn0PhuYfnD3nlqR/lfzz1q7z86CO57dQOf9rNc/JPn5qTDZsrM3L40Gx+5fVCDTkqi+/4WHpv3zQAAAAAAABsr4g6gD+Qz9x2W2791iN58ZWnM2v2I3n+qSk5O8lrtT/Ks+s7jz89t81bkOdnP5JZi36auz9enmRZ7vjuC9lpY+j6ObnzK79Oc4bmskfb712Q//jS0DQ/OznT5m1I+n8sU2dPz02jC7ec+ZXpmTX7kcy655wM2oenas7pmfLL3+T52Y9k7ss/yZRTkjQ/msd/uSEZNC7fnP2/cnHb2Au+/khhrctPSrIy37v+R3kt5Tn76/+Z3y16JLNmP53Fj/59jk1zFnzln/Lw6k5rbTgqF7c/1+zb8vH+239+5h3/mcVPtb+vpPnnP8qPN/99frjop5k1++nM/fp/S5IseOzXKUzdJ2defndunToz81csyNzZj2Tuopm5rDppfvbf8/iK7Nv76vjn8KMFhZqeWpD5X/9vKc/refAL92TRdn+Izcno2zL/lacza/ZPs3jerTk5SfPDs7r4ewEAAAAAAAC9VxEFwEmfUePzpc+MyNbccsjQHJskeT1vdt5/efS4/M3WM3M/kM98aXySpPnZpfn9TuZfv3B+/itJPn19/nFrh2mfnHL5FTkjyc+fXbrz8HhfTbg8E4a0/zAsI09pq2XDblZa8as8XJ8kf5eJHTp9+5w6KTd9OkmWZfaiP2x/z8U35+ZTd9YPe3o+/fH2eT6Q4ce2ffupsTmz7ZYhZ47LGUmyaGW2bjI95GP50hdOL3QmJ0mfoRk5PEn+kNVr9u1tbf1zOPOKfGn0tk7hIROuzz9WJ2l+NE912i76gonjs/U1Dh+RwmvckPW2gQYAAAAAAKCIFNEW0G3Wr8qzs2flqWd/nSWrN7d1oq7M73fT6dln0AdSnaS+vrCdcldee3l+4Zuf/498+OddDKh/K+uTfer07W5rXnsh9Uny8RE5drtPKjOorcDfrHgz6bgNdJ/K97Ydcp90ff/mP+Tl2fMz+5fz85vXNmRNW8Je/+aG7OSOXdr65zBy6LZQN0lyVI4enqQ+ea3+zR1vBAAAAAAAgCJXRAHw5qz47nX54h0vZMM+3b4hnZuEO6scMizJyqRyaEYO6SK4rD7KebKdrJ43OddePyuv7CxVBwAAAAAAALpN8QTAK36Ua+94IRuqx2bKt67Pp0d9IP37LM0dwy/Ng3tw+/o1fyh0/o4cmsqdjBl09NAkK5PP3Jz/uONjB3XYO+jY01OdX6f+2f+fvbuP0rK870X/HYUZEGZEBbRCd3iJIBARjBVSg5GoqNFoKmZRQ9so20SiJ5Lsrca9fDmrYPZOxHVS7YlRY1GbGss2mIpYxUQxGBOwKvgGjtm8nJahKGhwAGUGdM4fM8AwDC8DM4zcfD5rsXie+76f6/o99/3AP9/1u67KLE3jruR1Wd2QdI8afGzzH24t1XNy27dmZnFOyNenTc4VI/umR9mazLjszFw/d++H7TdsdJLZyeLlWZGhjbqA382aJUlSmn79uifRBQwAAAAAAMDBpTB7AFevqKxf8njEBblo+LGpKEuyoj78bNbqZanasv9rzau5Y+rsJMmJXzs1/XfykYovfDV/WZrkoamZOq9xn/GaLJz1fJZs3U+2LBUNKXJNapPUtP7ewLsz+NRc0i9JHs7dM7bt9Vuz4K7c9niSnJCzRnRv2xpWLMvCJBl0Ti75Qt/0KEtSvTyLd9hkuWX3q2LkOTmvNMn8abm/0XNYMeP23FGVpPSCnDW49b4GAAAAAAAAHCgK0wFcMfjknJjZeeWRq/K5hQPTOyuzeMWxGdQvaTYFXvJgxg+bmf79u2f1ksqsqU3Sb3xuHLuLrtiyk3P11NF5fNKcPDB+VB7pNzC9y2qyYvHyrEsy6NrpeXjiwJSlPINGnpA8/lpeuO4rGXJjbXLWj/L7O0anom2+fjMG5tJbx+eRix/Mc9d9KUNuHZj+PdZkyeJ3U5vSjLr1h7mk9+5H2Sf9h2ZUafLPi6fmghEzG+avTf9BxyZVKxtd2ML7VTE619zy5/nVdb/b9hyyMouXrkvSJ1//+bUZ8UluzwYAAAAAAIA2UpgO4PT+av7uJxfnxPJk3dJlWV1xdn4w6x/zT9dekNJmLh91y/Q8fN3Q1KyozJra8px43g15eMa1Gbab4LDH+T/Ks4/9IF8/q0+ytDKLF69M2bCzc8ODv87MiQO3Lgvde+zkTD7vqJSmNrVlfXLa4PL93gVcNvzazJ53b645q0/K1lRm8eJ1qRh2dm548F8zbVdBd6sVcHJunHFtRnUvTe2ayqyoGZqrH/xlZt4+Pv2aXNrS+9V77J35/WOT85fDjkrN0sosXpr0O2t8fvTYz3LjcOkvAAAAAAAAB6eSZ+e/VNeaA/5hWVUuH/fl1hwSYK/cO/2xHNe3V3uXAQAAAAAA0Kzhx3+61ccsTgcwAAAAAAAAwEFOAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAQEEIgAEAAAAAAAAKQgAMAAAAAAAAUBACYAAAAAAAAICCEAADAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAAABSEABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACqJDexewp16/86rc/OSOxzt2Kc+Ak07ORX9zYYYf3bHtCvjji/n7a+/Lb/PZ3PR3E/KZrm03FQAAAAAAAMDeOPA6gDt2SI+e5Vv/dKxdlzeem5Mp37gmN81clg1tNO0fX34qc95JNr3zUn67rI0mAQAAAAAAANgHB0wH8FZ9z8uU28ak59YD1Vn2xLRM+ckf8sa9t2VKx5vyg3OPafVpjzhpTEb3rO8A/nzfVh8eAAAAAAAAYJ8deB3AO6hI33O/kx9cfnSS5K17f5bf/rENpjni5Hz73h9n+r2WfwYAAAAAAAA+mQ68DuCd6HnBhRnzwD15atPyzJq3Kp/f2gX8bhY8MC3Tnlyeqg1Jxy5H5/OX/3UmnNE3XbIp86d+Jz98Lun25UmZ9o0BjUZckce+9b9yX1XnnD/1tkzo9lSu/8ajeStDM3nmFflMoyv/+NJD+ft75+WNqs3Z1LFDep0wMhMmXZLhR2QPagAAAAAAAABoHQXoAN5icIaPrH/11vw/NOwFvCqzr7k5U2YsT1Vth4Y9g9/OnNtvy5QnViXpmBHnDE3HJGufmZfKxsOtmJdZVUm6DM2pA3c+6ztP/M9M/NvfZmHV5qRbeXp0Sape/m2mXPuPqazdkxoAAAAAAAAAWkdhOoCTjumypZ12/YfZkKT26Wm5+60k3YZm8p1X1C/dvP6V3HXlPXnqJz/Lb0ddm8+fMCpnd3k1sza8mucrk4ENYW/lE/OyOkmPsaOy0/z3j8/lrnursimdc+o1/yP//bSjkiQblr6Yt0oHZ2Bp8sc9qcGS0gAAAAAAAEArKFAHcFPVeeO5qiTJsMsv2bZvb9cTc9HFRyZZnvmvb0oyOKd+sXOSD/PM3EUNF72V55/5MMmROX9k353OsOG1eVm4KUnPkRnXEP4mSZd+J2d478NaUAMAAAAAAADAvitQB/CmbNjQ8LJr53TJirz+Wv3bhbf9j1x0246fWP3Hd5Mck4Hnjkyvx+ak6pkXU/mNwRlYOS/PbEgyYFRG9N75jCsq365/cdJxaf6yPa8BAAAAAAAAYF8VKABelAXz6l8NGHFcuuTD9DwiyTtJx27l6Va64yd6HXFY/YveIzOm15zcV/Vqnq/clMx9NR8kGXLuyPTcp5o673kNAAAAAAAAAPuoMAHwOzMfzVObknTsk/NHHpOkOj17J3knOeXKKfnvIzvu4tO98/mLe+W+26vyzNxHk2c+TNInZ4+o2OWcvQcenTy2PHn5D1mRE5vpAj6qBTUAAAAAAAAA7JsC7AFcnWVP/F2uv7d+OeYBl/91Pn9EklTklHMGpWOS5++clgXrG33k7VfyzNxl2dDo0BEnjcyQJB88+Vxmb0gyalRO6Zpd6nLCZzMkSd6Zl+lz3916fMNrT+Vn81a1uAYAAAAAAACAfXHgdQAvezw3Xf7M1rcb/rguH2xKkg4Zcvl3cv252/bTLR15ca74zP/K//v6q5nytUnp1rNzOtZ+mNVrNycpz/Kjp2TCwIau3CNOztknzcgbL2/OpiSnjvpsmlmxeXtHfDHf/ta8fPsnVXn+tpvzwr3l6ZaG8Tu+lQEP/F8Z0ZIaAAAAAAAAAPbBgRcAb9qc1e+s2/q2Y5fyDBl5ci76mwsz/OimQeox+eL/nJK+Tz+UaQ8syhvvrEs6dkivkz6fCd+6uMn1Dd26Ly/Opo5Dc/YeLtfc89xr8/c9H8rf3/5S3li7Lqs7ds6QL16YCZd/MX27trQGAAAAAAAAgL1X8uz8l+pac8A/LKvK5eO+3JpDAuyVe6c/luP69mrvMgAAAAAAAJo1/PhPt/qYBdgDGAAAAAAAAIBEAAwAAAAAAABQGAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABREoQPgd56YnIsumJzZb+/umrvz+v4rCwAAAAAAAKBNFDoArvd27v6GgBcAAAAAAAAovoMgAE6SV3PzNU/lnfYuAwAAAAAAAKANHQQB8NEZc87RyVuP5v95YlV7FwMAAAAAAADQZjq0dwH7Q9+x38wVS6fk7p9MyV29f5yJJ+z+M6/feVVufrLRgXO+mUeuPHHb+7efyvXfmJfRP705w1+enIk/2bLR8NG54qc35+yjmwz42t256IZXt70fcGHuum1Meu7ldwIAAAAAAABo6iDoAE6SY3L2bd/MmCRP3bC7/YBXZfY1V+XmJ4/OFT/9cR6Z+eM88tMLM+DJe3LRDstIv527v3FVJi67sP66md/MmGb2HH79zqty0Q2vZsz3G8abeVOuyKOZeIG9iQEAAAAAAIDWc5AEwElyYib+9MIM2M1+wO88cU/ufqtJF+/RY/KDn16YAc0sIz3gWzc16gw+MRO/PzTJq/ntaw2H3n4q//RkMub7jTuPtwTSja4DAAAAAAAA2EcHxhLQbz+V67/xaN5qdGhLoLrDUs27Wlr56DH5b9+al4k/eTQT7zx6+yWdkySrsuDpt5MBF2Z40yWcjx6a0QMezd1Pv5p3zj1m50s39+ybAdm21PM7L8/LW0neuuGqPNXM5QNWrEpOSGZfMyV3N/6CW5acbrp09M6WmAYAAAAAAAAOegdGAHz0mPxg5phmT33myh/nkSv3fKie596cycuuys1P3pO7Rv04F7VSibu2+9D27Nt+nLObO3HCFXlkZlvVBQAAAAAAABTJQbQE9DafuXLLfsCT88iytp2rZ2+tugAAAAAAAMD+cVAGwNv2A347Tz35dqPjx2T4GUcnb83LgrebfOTtVzPnrWTAGUN3vvxzc3r2zYC8nbtnvLLvZQMAAAAAAADswkEaAKd+WenvD93hcM9zL8yYvJ27vzE5s7eEwFv3IB6avzr3mBbP89++dXTy5D256M5tIfDrd16Viy64Kne9tg/fAQAAAAAAAKCRA2MP4LZywhWZfM5VufnJxgdPzMSZP87n77wqN3/jqty95fA538wjV564V9P0PPfmPNL77lx0wz25aOtc9fsCD8+qJC0MlQEAAAAAAACaUfLs/JfqWnPAPyyryuXjvtyaQwLslXunP5bj+vZq7zIAAAAAAACaNfz4T7f6mAfvEtAAAAAAAAAABSMABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAQEEIgAEAAAAAAAAKQgAMAAAAAAAAUBACYAAAAAAAAICCEAADAAAAAAAAFIQAGAAAAAAAAOD7i1IAACAASURBVKAgBMAAAAAAAAAABSEABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAC4FdTV1bV3CbBbfqcAAAAAAADF16G9CzhQ1dXVZcMHtdnwYW0+rqtLTe3m9i6pTRxySEk6l3Vs7zL2i5pNm7N588ftXUabKSvtkENKStKlc2m6HFaakpKS9i4JAAAAAACAViYA3gt1dXVZtaY6HTocmvKuZTmsU2l7l9Rmlle9lx5Hdm3vMvaL5VXvpU+vI9u7jDb1wcbafPBhbdZ9UJM/6VHR3uUAAAAAAADQyiwBvRc2fFCbDh0OTY8juhY6/KV4DutUmu5HdE3HDodm/Qc17V0OAAAAAAAArUwAvBc2fFibLp0Fvxy4unQuzYYPa9u7DAAAAAAAAFqZALiF6urq8nFdnc5fDmidO3VMXXG3OwYAAAAAADhoCYBbqKSkJDW1m9u7DNhnG2s3tXcJAAAAAAAAtDIBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAXRob0LoLGqPP3A83lp1Uct+lTXQSflby4YmK5tVBUAAAAAAABwYBAAf5L84ZX87v9sbPHHav7tlfzmcwNzXo82qIl98F5eeWROZv+hdtuhrj1y3oQzMySVmTHt5SxZ3+hU70/ngvF/lu7/8Xx+/si/Z83Wn8Kh6T761Ew4pdf+LB4AAAAAAIADkAD4k2Rzw99dj8ifn9sr3Xb7gfcy/+GVebdtq2JvrX49v1mwITWNj61fmaf/bVWG9FiSRas2bXd5zZvL8srqP0vvuUtStabxmU2peuyVvHJKr5y4H8oGAAAAAADgwCUA/iTqdHiGDD0px+z2wtfyhgD4E65LBn+1b/o0vFv++9dTteVU72Pzpc8d2fDmw7zxxNYzKTu+f844oXP9m/VVefqJ/VQuAAAAAAAAB7RD2rsASJKN/7ks/1HbzInalVn6ny1fFhsAAAAAAAAORjqAaXcb//OVPP3c+6nptDYfnzM8nyptOFH773n+yeV5e+OheXvUZ/O5P+nUrnXunQ2pfKIySxrebd6YdB3U8GbVqjz9xOqGNx9l8/rSHNXwrub/LMvTKw7deq4mRwYAAAAAAAB2RwBM+yvtkEOTZOO6vPTkguSc4flUtoS/SXJIOpbueohPru4573tf2rp37ysP/mN+s+XUp0/MdeNPaHizKo/fPnfrpw4ffWauPq1hEfDVc3PHHev3U70AAAAAAAAcyCwBTbvrdNSQnH7GUTksaQiBf58nt4a/HfNfzhiek486ELt/AQAAAAAAYP8SAPOJsH0IvCkfCH8BAAAAAACgxQTAfGJ0Ki/PYR0bHejYKT3Khb8AAAAAAACwpwTAfDLU1u/5u2ZTo2Ob6vcE/v9q260qAAAAAAAAOKB0aO8CYEv423jP389kSZ59+t18sLE+BM45w/Op0vYudG+8n/n/e3beaHi3flWSP214s2pJfv6/Vza8qc2a9Un/Lde99m/5+aqGL/zh+1mfrvutYgAAAAAAAA5cAmDaXfXy/9wu/K3f83dITj/jja0hcOXytfnUgG7tXOne2JS3X3s7bzc6cviWF2urs2RtdaMz25a7/mjVH7NkVeNxBMAAAAAAAADsniWgaXcVA/4sXzjh8Ebhb71ORw3J6WcclaNP+EzGHJDh7zZd+lSkS7NnOubo47ukrLlTnbqk1zH+iQIAAAAAALDnpEt8AhySowaduF34u0Wno4bk1EFHtkNNralT+o8ZkE8118TbtUdO/eIxzfb3Htqnb8YM1/kLAAAAAADAnrME9CfR5o+ydt172TEObWpjNu+HcthXG/PqPS82f2r9yjxyZ/OnPnrz9dz3ZttVBQAAAAAAQPEIgD+J1v5HHr71P7Y7VPbpP02f9f+RylU7+QyfPD2OTq+uy/P++sYHO6bXn/ZIuh6ew7Mm7zc+1fXw9OmWHH1cRfJm9fZj9emRXm1fMQAAAAAAAAc4AfAnyaf7pH/XNVmyfveXbueYXjmxR5tUxD4ZmLHfG5ixzZ47NVdPObX5j53yldx0ShuWBQAAAAAAQGEJgD9JOg7O17736axft34nSzufmDFND3XonG6dO7d5aQAAAAAAAMAnnwD4E6c0XcuPbO8iAAAAAAAAgAPQIe1dAAAAAAAAAACtQwAMAAAAAAAAUBACYAAAAAAAAICCEAADAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAAABSEABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQALdQXV1dyko7tHcZsM86lXZs7xIAAAAAAABoZQLgFiopKckhJSX5YGNte5cCe+3DjZtS4l8/AAAAAABA4YiA9kKXzqX54EMBMAeuDR/Wpkvn0vYuAwAAAAAAgFYmAN4LXQ4rzabNH2XNH9frBOaA8sHG2qz54/ps2vxRuh5W1t7lAAAAAAAA0MpsZrsXSkpKckz3imz4oDbr1tfk/XUbU1O7ub3LahOHHFKS1e+tb+8y9osOHQ7J8qr32ruMNlNW2iGHlJSkS+fSHNVN9y8AAAAAAEARCYD3UklJSbp2KUvXLmWpq6tLSUlJe5cEu+R3CgAAAAAAUHyWgG4FQjUOBH6nAAAAAAAAxScABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQrRoA19XVpWuXzq05JMBeK+/SOXV1de1dBgAAAAAAwH7TqgFwSUlJNm/6KNXrN7TmsAAt9v66Ddm0+aOUlJS0dykAAAAAAAD7TasvAV1W1jHvra1u7WEBWuS9te+nU2nH9i4DAAAAAABgv2r1ALi862F5+fXK1h4WoEVeev2tlJcf1t5lAAAAAAAA7FetHgB37lSa0tKOeXbey609NMAemfP7l9OprGM6lZW2dykAAAAAAAD7VYe2GLS8a+e8v25DfvHEnHz2hONz5OEVOby8S1tMBZCkfs/f99a+nxdfezOdykpTofsXAAAAAAA4CLVJAJwkh5d3ycaNtfm3VxaldtPmdOxwaNZt+LCtpgMOYuVdOmfT5o9SWtohh5d30fkLAAAAAAActNosAE6STp1K06lTfRBTV1eXY3oe2ZbTAQepurq6lJSUtHcZAAAAAAAA7a7V9wDeGeEM0Fb8/wIAAAAAAFBvvwXAAAAAAAAAALQtATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCA6tHcBAAAAAAAAAAezBQsW7PMYw4cPT6IDGAAAAAAAAKAwBMAAAAAAAAAABSEABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCD2WwBcV1e3v6YCDjL+fwEAAAAAAKjXoS0H/3BjTarXfZCa2s0p7Xho1m34sC2nAw5SXbt0zqZNH6WstEMqyrukc6fS9i4JAAAAAACgXbRZAPx+9YZs2vxRRgwbkiMOL09F1y5tNRVAqtdvyHtrq/Pia29m06ZNqSj3fw4AAAAAAHDwaZMAeP2Gjako75LTR5zUFsMD7KCia5dUdO2SPr3/JM/OeznrN3yYrl06t3dZAAAAAAAA+1Wr7wH84caa1NZuEv4C7eb0kSdlY82mbNxY296lAAAAAAAA7FetHgCvW/9BTvrMwNYeFqBFTvrMwFSv/6C9ywAAAAAAANivWj0ArqnZnCMOL2/tYQFa5MjDK1JTu6m9ywAAAAAAANivWjUArqurS8fSQ1PRtUtrDgvQYoeXd0lpxw6pq6tr71IAAAAAAAD2m1YNgEtKSrJu/YetOSTAXqte/0FKSkrauwwAAAAAAID9ptWXgAYAAAAAAACgfQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAUhAAYAAAAAAAAoiAMmAF44ZViO69/0z6ic/bXv5f55a1p3surnc8v5p2TI+bdnYU3rDt1y67Jo1u35zte+kpMavveQEeMy/uoHM3fJuvYurv0smNrwG/hKpi7Y3UOqzN1nNfxmLpuZ1S2cavWMK/fws+syd8q4DBk0rlFNazLjsvq5b1nQwokBAAAAAACghQ6YAHir0qMyaNDA+j/da7J0/ux8f/yZOXvKq2lxVrvi4Vzcf1gmzNg+QF499xd5YHFtahffl1mLWq3yZqzMQ2N3ESyumJPvnX9GLpx0Xx6fvzzpV/+9K6or88LjU/Nfx5yR7zzVyuF3e9vJM9m55bnnjtm7DGarn5qWO5a2RnG7sfr5PHR/ZWprK3PPrMr9MCEAAAAAAABs78ALgEdOyj/Mmp6Zs6Zn5vwX8rufXJxeSZbef33ub2FYW7OkMq80c7zHaRfn64NKUzrospw/uDWK3lkBy7Jo4c7OvZpbLvtuHllcm9Jhl+Wf5i3My7+q/96/X/xcHr31gvTrNz6XfqF7Gxa4/+3smezS3Lty9067gJfl8btnp3Yf69ojPU7NJZcOTGnpwHzz/IH7Y0YAAAAAAADYzoEXADfRY8yEfHtEkqzMQ3Nb1nW5ouq15k9UnJobZ72QN2ZNyrCyfS5xFwWs3EnYWZOFt16fB5Ym6Tc+D/58Ukb0aHy+PIPHTs7sX7Vxfe1gp89kl1bmgZ10Adf85sHcsrOQvdWV57SbpueNxdNz7fCCPRgAAAAAAAAOCAd8AJwcm96D6l9Vrd7SBVqTFb95MN8Ze0aG9B+W4wadkYtvnJklW06vrl9a+YKb6gPj5647c/s9XlfPzIT+w3Jc/6lpmh2unrf9uBOmPLlt3GTr3rRn31eZ6kUzc9PYUQ379l6Zu7fuVbwmv7p2XD53/vezOEnm3pw/7z8sx/W/MjNWJ6l5MTPuX5kkOXPSxD0OeWtWPJ+7J27ZK/iUfG7sjvsj1+9ne0q+99SarJ43LRNGnJLj+g/LSWNvyYztvsiruaX/sBx31oNZVF2ZGTf+df24g87IhLte3CFsrVnyZG7ZOveoXHz1g5nfTCLb9P5tvW53z2Rneh2bXslOuoCX5ZE7fpHaJL16HbvX92y7+ps80/sXNN6HuWX7/e72twQAAAAAAAAtVIAAeFmWzq9/1atHWZKazJ9yZkZPmJrHF9am96CB6Vf2bl556OZcMPHJ+jCxrDSl6Z6K0vrPlXbfsqdw+S5nWjHjypw+fmoeX7guFYMGZlDFujx3//W5YOLMrGhy7dLbL8/pX745j1cfm0HdS1O75ne5bfx389CSJClLWVnSY2sBW/Y17p6KJFn0Yh5JkpycM4ftuqYtahZMzQVfuCq3/Wp5aroPzKBB5aleODvfH/+lTJixssnVtZl13V/k9PF3ZXGPvulXnqxb+Itcf/7UzG0aQC69K3912rhcP2tdeg86KqW17+a5qZfnWz9ftv3cY67PA79q2Ke4X/LK41PzV1+bmoWNxtt2/95NWb+BGdS7tv66y6ZlUfbumaT/Zfn2pccmWZkH7p6T6sb3ZEv3b+nZueG60ft4z5LMuyVf/fIt+XXNtmf6/YuvbHimLdOS3xIAAAAAAADsqQM+AF4xY2puWZwkfXLJaQOTlGXEZT/IDVPuzZxFz2X2rOmZPf/efL1XUjv3jjyyKEnFqZky68e5ZmT9GCOu+3H9nsJTR6fHziaqfjLfv+53qU2ffP0Xz+X3s6Zn5vzn8vClfVI79+bc9tS67a+vOTaXPPhc/b6985/LP1xSmuS13P2ryiTlOe2W6fmH606uv3brvsaTc1aPpHr1yoY9awemf+89uQuVuX/Sg1ma0oy69V/zxvzpmTnr6bz8i/Hpl9o8d9338lCTVLE2J2fyb17I72dNz+yFv8zkYUlqf5FHftPke6Qmvb92b15a+C/1Y067OKVJXrlrThY1M/fLv5qemb96LnNu/fOULn0w37mvYVnu6jm57cbfpTbH5i+n/XrrdS89dm/+6a7xGdxjL55JkqQsp026Omcmya/uyENb94FeubX798SbJuasXvt+z5KTc+NTW579v+QHp9U/01vuezEtatxt6W8JAAAAAAAA9tCBFwDPuz3/9fxxueD8cblgxCkZfd3vUpvSDLpici4d3HBN71Nz6ddOTu8tSyeX9cmg/kmyMitW790au9Xz5uTXSXLepFy9dX/Xsgy7bEJOSfL43Fe3DwFHjs+lI8u3XjdoeH3YW7WX8+/SoufzUFWSfDVXjN221HHZ8Im55rwkeS2z5jfpaB17WcZuDZf7ZtCw+lfV65rWd3K+ftnJ9Z3JScoGD82IJKl6tz6k3jJ3r4m5ptHcvcdOyCVJqma9miVJquc9mcdrkwy6LJd+ofvW6yoGn5wRvfdxv9yKc/Lta/skWZnb7ngy1Ulq5k1r6P69ONeO7bvjZ/bmno08J2f231LrsTn/0guSJLVz67/jnmrxbwkAAAAAAAD2UIf2LqDFat/N4sXvNrwpT7+zLsill07MJSO7b39dzcosnDUns34zJy8sXZfVDQld1Zp1SVoeOC5dOKf+xePfzWcfb+aCqndTneymW3XPVPQ4NqVJalOZJSuSYbvpAl699MVUJclpA9NvuzPl6dFQ0AuL1iRjm98Hd19snbvqjlzY/44dL1i8POuS1Cx9rf79iIHp3+pVJIMvuzZ/eftV+edf3ZGHFg1MxdT67t9Rt0zMiGYed2vcs7Ie9fsPV20Jw/fQ/vwtAQAAAAAAcHA58ALg0ybnd/ddsMtwbMVTN+fKSTOzuCWp3G6U9+6bpDIp75NBzXWs9jpqL2Llneg/NGcleTwv5tcL12Vs7z3bB7g9VJQ3BKSlR2VQ/+7NXNAn5Unbd7SWnZorbjoh/3zTa7lj0nfTY2mSXlfnmrHN1NRaatbV7yndQvv1twQAAAAAAMBB5cALgHenek5u+9bMLM4J+fq0ybliZN/0KFuTGZedmevn7v2wPbr3SVKZnH9tHr7l1LYN6Cr+PJdcUprHH6rNr2+floVnTcqwXUzYo9/J6ZXfpWpuZZamcefouqxuSChHDW797t+kURds/4n50ayv7rS7t7rfCUlWJvMrsyRD26QLuPfYa/P1u/4mDyxdnqqU5rwbv5rBO7m2Ne7Z1r2aB9WH3Htqv/6WAAAAAAAAOKgceHsA786KZVmYJIPOySVf6JseZUmql2fxDpu0lqWiIbWrSW2Sml12qVZ84av5y9IkD03N1HnrGp1Zk4Wzns+SvWhxLSvfWkBqktRsHaMsIyZNzqjSJEvvy/iJD2dRdeNPrsvCu/46Q86amoU1SQafmkv6JcnDuXvGtn1raxbcldseT5ITctaINuqEHXxOrhiWZPHUfH9G4z1z12XJb57M/IYwtWLk6JyZJIvvy/2/WbP1quoFM3P/b7Z8rmXPZAdlQ3P1jWenNEmGXZtvj9lFLLs392z1slRtKajm1dwxdXaS5MSvndqiQLstfksAAAAAAACQFLEDuP/QjCpN/nnx1FwwYmb691iTJYtr03/QsUlV44CyPINGnpA8/lpeuO4rGXJjbXLWj/L7O0anorlxy07O1VNH5/FJc/LA+FF5pN/A9C6ryYqGPW4HXTs9D08c2KJuzorBJ+fEzM4r82/O2YNuSW1G5875P8xZFUl6nJOfzFiZ8WPvyCtzv58Lh09N90F90yPb5kxpsnBJTYYNHphLbx2fRy5+MM9d96UMuXVgw/d+N7Upzahbf5hLdrOP8N47NhfdeHUe+todjeZOVi+pzJrapPS8sjx7x+j0qDgnN9w6M3Ov+13+ecKZebzfwPTOyixeui4pvzj95t6Y0ypa+Eyau6djfphnHxuf6t676zLei3u25MGMHzYz/ft33/r90m98bmzp3spt8FsCAAAAAACApIgdwGUn58YZ12ZU99LUrqnMipqhufrBX2bm7ePTr8mlvcdOzuTzjkppalNb1ienDS7fZcdpj/N/lGcf+0G+flafZGllFi9embJhZ+eGB3+dmXsT2PW+ID+ccna6lya1tWXp94WBqWhUQNngCfnF/F/mH248O6f0K8uaxZVZvHh50u/knHfjj/Pk/J/l0sH1s5YNvzaz592ba87qk7I1lVm8eF0qhp2dGx7810xraUDZQmXDJ2Tm3Htzw3knpKK6MosXV6am9+h8/fbp+f0do7cur9x77J159sGrc2a/8qxbWpnFq4/KmZf+II/OvTGnVWy5pmXPpDk9Bg9N/z1IjFt6z0bdMj0PXzc0NSsqs6a2PCeed0MennHtLpfn3mmNrf1bAgAAAAAAgCQlz85/qa41B/zDsqpcPu7LrTkkwF65d/pjOa5vr/YuAwAAAAAAoFnDj/90kmTBggX7Ptbw4UmK2AEMAAAAAAAAcJASAAMAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAQEEIgAEAAAAAAAAKQgAMAAAAAAAAUBACYAAAAAAAAICCEAADAAAAAAAAFIQAGAAAAAAAAKAgBMAAAAAAAAAABSEABgAAAAAAACgIATAAAAAAAABAQQiAAQAAAAAAAApCAAwAAAAAAABQEAJgAAAAAAAAgIIQAAMAAAAAAAAUhAAYAAAAAAAAoCAOygD4o4/r2rsEOOD5dwQAAAAAAPDJ06G9C9hfNn1cl797K/mn5cn7m+vy7xvauyI4sP2Xw5LDO9Zl/KeS7w5MOh5S0t4lAQAAAAAAHPQOigB408d1GfSvydKtoa+gCvbVv39Q//f1ryb3LEkWf6lOCAwAAAAAANDODooloP/+D43DX6C1Ld2Q3P5We1cBAAAAAADAQREAP7CsvSuA4vvZ8vauAAAAAAAAgMIHwB99XJf3N7V3FVB872+q//cGAAAAAABA+yl8AHzoISVb9yoF2s6/f1D/7w0AAAAAAID2U/gAGAAAAAAAAOBgIQAGAAAAAAAAKAgBMAAAAAAAAEBBCIABAAAAAAAACkIADAAAAAAAAFAQAmAAAAAAAACAghAAAwAAAAAAABSEABgAAAAAAACgIATAAAAAAAAAAAUhAAYAAAAAAAAoCAEwAAAAAAAAQEEIgAEAAAAAAAAKokN7F1Akz/xFSU4vbXq0LvdPTya0R0GfcIvGleT42rp895fJ7fthvvrnU5dnFyRffKv1xl00riTHNz1YXZdDnmjlOVp5TAAAAAAAAIpHB3ArmHZuST4etyVcrMsh0xv+LKtLUpJLx5XkvdHtXeW+mzQ6+fgvkkntXcheOqY0SUpyTLfWGW/S6OTjcSU5Pts/9+++U5dUlOTjccm01pkKAAAAAAAA9ogO4H00aXRyaUWy9p26HDmnyckXkkNeqGuXutjR4Omt9ywmjU5+1LOk2ed++5zk9njuAAAAAAAA7H86gPfRFT1Lktq6/G3T8LeATuxU0t4lfGIcTM8dAAAAAACAA4cO4H0waXRyfJI3q/ZiD9tTko/7NgpUm+6Fe0rycd/k/ulJzi3JpRVbTjS/p3DT/YffXFaXwS9sf37Y2rocuaHRvI32lN3S0bpV4/1mt6u1JD8al/yo6RwDkveGl2Tb6sqtt/fxtO2+f5rfX7fp/WxkS53142xf19b7UrV9/c12dDfY6+fezD1qdj/iJt/lzWU77ybe3XNvy+cCAAAAAADAJ48O4H1Q3xFbl1VrW/a5aeeW5OO+JXlz2bZ9Y59tCFa33zO2fv/gr2xsuG5BXdamJJc23od3QPLeuJKcnrp8t9Hew8f33XHf4W49SxpC5YbrnthWz496NqpnWcMetuc2fPCF1NdYm/qguuHzW4LGSaOTj4eXJO9s+z73V5fk0nHJMwNadm+aeuYv6kPbrXvsLqjL2oqS7fcibghM1zaa/9na+lNr32kSiDajW8+SfDw8+ZettdcfW3RK89fv1XM/pf4edave/h6dPnz7eSaNbgh/G123qldJjm863p489y3hb6Nndn91SS49t+lgAAAAAAAAFIUAeH8bkHylYsdOzS/+si5vpiQjm4SOby5r1In6VvK379QlpcmFDcHqtP4NAV/j7uEXku++U5du3RqFpEl21v054YntA928kNxfnaSiaSDdvCua2Qt3whN1eba2JMN67cEAOzFpdHJ6aZMu2beSIxfUZW1pSf7vhqBzUpfssBzzF9+oy9okqzbswUS1dfluo/sy4Ym6vJnk+KP2vvamFm0JdRt1Lk94oj5sPr7vtvt8Rc8dr6v/bWxvj557t6Rb6vLsG9uumfBEM93TAAAAAAAAFIYloNtK0yWJG0K9Sb2Sbkm69a3vxm1qbZddD3v7hvrll7cYWZE0XpZ5e3U5sfHb2uSVPSz/lY11ScXur8sp9cshp2dJPh7XzPlOezhhMy7sVr/P7qNNl0h+K1k4JDm9Iei8fUP98tVXnFKX27d0JfeqDz8XtrA7e4tVtdmx63ZvNdyjN9/d8dSEd+tyaUVJRp5Sv8zzzq5rao+e+9pkbUpyLSvfagAAIABJREFU+vC6PJNmlpoGAAAAAACgcATA+6A+JC3JMd2a2aP1heSQF+qPLxrXdAnfnez9urea2xO3pXbYKzZJ/n/27j86y/rOE/6bjkAVodoCcYUzS7BCpYBiPTU7FTvoGnRqoQ3OcZ0yVRkVhGdq25UOO1Z2H9BZWty27h6RaAe1altPCzNQHSBW6Yh2QteK/CgM9JGw5yE+JNjKgNQCVp4/7gBJSEKAQMzt63UO5yTXfV3f7+e67vvmn3e+30/rvWebO6L37Kn0i+QrvQ7k281C9X+tOXBSQs823/dT6Wjv++bkw5sPFPoEj0reHZUje00DAAAAAABQVGwBfQLuX5HCVsEDmm+13MY17dmS+Bhs33fiYzz/+W5H9Kf9Sn07w82dyXEusu1Qk/vncJ/gZj2KO9r9tYV7Ppb3vaMdy/t+xT806p/co1u+/fnOqxsAAAAAAICTSwB8girrDySN+tEe1cFtec/rmPm3/j5Jn+T5Icc5wJDkoh6F1bLHtYp4c7I9JycMXbyzab/jQxpq3rmzYSXrJ5OPpVvOOauFQU6GQ72Y237fFxzs5/yLtNpTeMFHuiU5kOpf5FCY3p7ew8f1vm9O/nHXMZwPAAAAAABAlyMAPkH3r0i+Un8gZzX0wG0SyA1Jftt8++eD4WGfbnn3msOHF1zTLe9e3y0bPpljMmnpgfxrClv8Hpq7Yd5327PSs4UAd8E13fLt/t2OOHXr73MokL1jzOH5htUUwtDGK0vvGJO8e323/La9wXgLCiusW7i3Ud1yVg7kH1c0HPtF8rN9ycdKC8+w8b8Tmf9otT26K4fe9wWNXjv4Xt5Uerjuylbe85v6JDvrk0nJ4YC2T6O6W/oMpZ3v+yfT9DP5yRTm22kLaAAAAAAAgGKlB3AHuH9Fcn8OZMP1jXqtHnJkv9/7VyT3f/JA3i0thIeNz1t8HPMPe6pZn9ek0B/2tfatyh1WU6jl29cn307DauDfpEk/3SSZ9NqBfG5UYZ4/TZIPHkg2p9DveOeB/HbU4THSME7l0faH7tH0moMO9hQe9tSBQlDa/N4arVZecE23/GkO5CtPNQ02n/98t/xp/0IAejJ6AU9aeiCTGgLpm65Pbmqh/oPuX5HcP6TwjJq/541rm7T0QHJNt9zU/+B5B/LoUw3Hms1/tPd9QZJHdzV9djvrD+TDKwIAAAAAAECR6vazVb9sZ7PX9vl1TW1uuf6zHTnkCfvAUx16i7zHbLi+W1LTQs/fTxZC7OYhKyfPu9cfuXK8M333qZ/k/NIBnV0GAAAAAABAi0Z97KNJktWrV5/4WKMKKwJtAU2Xt31f8rHSZttvfzJ5t7Rbskv4CwAAAAAAwPuHLaDp8q74hxa2ic6R2zADAAAAAABAsRMAUxQmLT2QSZ1dBAAAAAAAAHQyW0ADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFImiD4D/8O6B/PEZnV0FFL8/PqPwfQMAAAAAAKDzFH0A/Ecf6JYPde/sKqD4fah74fsGAAAAAABA5yn6ADhJPj+wsyuA4jfB9wwAAAAAAKDTvS8C4LuGJX17dHYVULz690z+y7DOrgIAAAAAAID3RQDc/QPdUjs+ufW85KNnJn98hj6lcKL++IwD+eiZyS2Dk/93XOF7BgAAAAAAQOc6rbMLOFW6f6BbKi8p/PyHd/UqhRPlewQAAAAAAPDe875YAdyc0ApOnO8RAAAAAADAe8/7MgAGAAAAAAAAKEYCYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBICYAAAAAAAAIAiIQAGAAAAAAAAKBIdGgAfOHAgZ/Y6vSOHBDhuvXudngMHDnR2GQAAAAAAAKdMhwbA3bp1yzv7/5Bdb+3pyGEBjtm/7d6T/e/8Id26devsUgAAAAAAAE6ZDt8CumfP7vntzl0dPSzAMfntzn/LB3t07+wyAAAAAAAATqkOD4B7n3lGXlm/qaOHBTgmv1y/Ob17n9HZZQAAAAAAAJxSHR4An/7BHunRo3t+Vv1KRw8N0C4r/uWVfLBn93ywZ4/OLgUAAAAAAOCUOu1kDNr7zNPzb7v35MdLV+QTIz6WD3+oTz7Uu9fJmAogSaHn7293/lteXvev+WDPHulj9S8AAAAAAPA+dFIC4CT5UO9e+f3v9+V/r9mQffvfSffT/ii797x9sqYD3sd69zo9+9/5Q3r0OC0f6t3Lyl8AAAAAAOB966QFwEnywQ/2yAc/WAhiDhw4kHP6f/hkTge8Tx04cCDdunXr7DIAAAAAAAA6XYf3AG6NcAY4Wfz/AgAAAAAAUHDKAmAAAAAAAAAATi4BMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFAkBMAAAAAAAAECREAADAAAAAAAAFIlTFgAfOHDgVE0FvM/4/wUAAAAAAKDgtJM5+Nu/35tdu3+XvfveSY/uf5Tde94+mdMB71Nn9jo9+/f/IT17nJY+vXvl9A/26OySAAAAAAAAOsVJC4D/bdee7H/nD7n0oo/n7A/1Tp8ze52sqQCy6609+e3OXXl53b9m//796dPb/zkAAAAAAMD7z0kJgPfu3Z8P9T4zn7501MkYHuAIfc7slT5n9sqggf8uP6t+Jb/fuz8f7Nm9s8sCAAAAAAA4pTq8B/Dbv9+bPb/7vfAX6DR/WnZx3trzdn7/+32dXQoAAAAAAMAp1eEB8O63fpeLhw/t6GEBjsnFw4dm11u/6+wyAAAAAAAATqkOD4D37n0nZ3+od0cPC3BMPvyhPtm7b39nlwEAAAAAAHBKdWgAfODAgXTv8Ufpc2avjhwW4Jh9qHev9Oh+Wg4cONDZpQAAAAAAAJwyHRoAd+vWLbvfersjhwQ4brve+l26devW2WUAAAAAAACcMh2+BTQAAAAAAAAAnUMADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkukwA/Orsi3L+ea3/m7TwjWMccXdemH19Pn7B9Zm7eu9JqflIb2ThzYV671l9iqZslzeyav5XMvaihmf59FGe5Y6X84OvfyXjLv1kw/MfnbHXfiX3LFybHaemYAAAAAAAAKAFp3V2Acesx0dywXl9jzjcr/cxjrPjpfzg0U3Zl+Shpzdl+qiRHVJeV7Rh/i2ZOHdrkt4ZfMG5GdC7Zytn7s2GR6Zl4j0vZ3dSeC8u6JvsfT0bN67Ilq+tyGOPfCmLF07KsNaGAAAAAAAAAE6arhcAl92Rv39kXPqd6Dj9PpUbbhqaF76f3HTt0I6orItam2fu35pkaO6qeio3ndf6mdsWfiV/fs/L2ZdBqfjmN3LXhKHpc/DFHS9n7pSvZOPN44S/AAAAAAAA0Em6XgDcYXrn8rufyq/u7uw6OtmO17NxX5JckgvaCH+zY0lmfu3n2ZceGf3NefnGhHObvt7vkkxfuPIkFgoAAAAAAAAcTZfpAdxuq+fm/PMuythHapIdL6fy5ivz8fMuyscv/cvcXfV6oxNb7se797VluWfK53JxQ2/b6770ZFY1a2y7Y/WPcveEwrjnnzc6Y6fMzdMbdh9Zy46XU3lwrIv+Ml/+/svZ3WK74Tey6pG/yXUNPXU/funU3PN0TfYe9ZxN2dXGo9i77aXD85/3yfyHCX+TR6sP9/fdsXBqzi+bkUJs+2QmttFP+bVnnyycN2BK7mwe/rbqjby6cG5uv2p0oVfwRZ/L7fNfbtIneMfCqYf6Du+oXpBJDffX+D3ZUf1kvnzweV9wZSbNXpbXTlXbZgAAAAAAAOhCinYF8Jbvz8i4b27KtoFDc97gfdm4ZV1+ePst6fnkP+TrZa3sUbxjWW6/dkZW7kt6Dx6aC/J61jwzNxPf6J0V3x+XgUm2LZyasV/7efalcM55eT0bn30yX3n2pbz646fy9VENY+99OXdfdUt+uDtJ70G5YODuvHD3jDxzxKSvZ+HNn8uMF/Yd6qm747Wf57E7rs+Wvf+YBRPOTbI3r37zlkys3NrsnJeTvitbvJ+9q+dm3HVPZkuSHn2H5oJ+b+S1V5fn3i+syAvfLIzbZ/Al+eTgdfnFlt1JeqTvBaXpl5b6Kb+Rjc9uKvx41cgMa9c78HoW/sXnMmPVwfsamh2vbcpP596SLbu+lyVfG5nGVa/6+ufzp7v3ps8Fpbmg34hc3rAa+fDz7pG+FwxNvx01WfnojIzbsi/LHym8JwAAAAAAAEBB1wuAq+/PX137ZJNDFbOfyk2jmp23ZW8uXPDTLPl03yR7s2r25zPx0dfzWOXyTC5ruYfwjlVLsnJfkooH8i9zP1UIKHdsyoYMLQSNu5bl3q/9PPsyKDc++Xi+XlZISg+GlI/9xdxc9erXc2nPZMMjMwvh7+V3ZcUjf164fsdLuXvCtPyw9vCcu56eWwh/B38hP3p6ei7qmWTv2txz7Rfz2Nfuz7NXfSNX9dmUZx9p6NP79ME+vbvz2obdGdhiw91NefSOJ7MlPTL6mwdD5MOh8Mqv/U1+cOnjuWHUpDz5/b6ZVDYzK3NJ7nxkXia02Fz5N6l9rfDT6GGDWnljmjs3137969m9ZWgqrm3oFbxtSSZ9emZWVj6ZF6aMzFV9Dp+9b/dHcmPjAL358z702t68Ovv6/PmjM3Nf1Zh8p/yItBoAAAAAAADet7reFtD7fpONGzc1+betpfMun5Qvfbpvwy89c+lf3JwLkuSFtdl4tO2D39ia1w7urdxvaIY1hKK7qlfkp0ly6aTcVHY4eBw44Y58aUCSfT/Os6uTZFNWfr+w3fR/uqnRKtV+Q3NRkz67u7OqakWS5DPTpxTC3yTpOTI3TbkkyfK8sHpvk/Nfe+31hq2he+e8YeemxbXMG17KD2qT5M8zudF2zT1HTcmdn0mSdXl61estXdmheg4bl5sOhr9JMnBQBidJtuaNZttq54bpmT6q6d0cet6fuSNfOvRaz1x086R8MskzL6yNnaABAAAAAADgsK63AvjyWfn5Iy2v4G1Tn54pxMGvZ8eupKUB+l01JTcO/nkee2Fuxo+6P30vGpPJX5qSik+Xpk+SLa8WwtpcMKjZ1sMfSd/zktQmW2rfSHbUZFVtkvxJLmpxhe5BNXn12cJPz9w+uoXtoZPaN3YnGZkb7vmTPPq1n+eHt/9Zfth7UP7jhEmZPGVcLmrhPnZseTm1SXL50IbA9aDe6ddw/i82vJG0u5fvRzKg4f5WbtiaTOh71CsO2VWTF55ekmdf+HnWbNvbENZvOhywH9Sz9xFh9qHn/cxX8okWH85v0spbCQAAAAAAAO9LXS8APpl6jszXn/1prl34ZB79/pI8++ry3DtpeX5w0/ey5O6RxzDQvnae1zsDz0uysdBPeGALWfGAvoWDAyfMy79c9FKeeeTHefTpFfnpozPz0+8vy5xn52XCSW+E2zeDLz03eeH15Nm12XD3Je3oA7w3Gx6Zlon3vJzdxzlr74GlSTY19FBu6eF8pOUV0AAAAAAAAPA+9f4JgHe8kS1JktIMbHPJaN9cNOGOfGfCHcm2H2XSp+/NykefzAt3jMylF41JsjzZuDXbMrLRKuDf5I3XkqRHBg/um/QrbHW8Mi9ny7a0sUS1b/oOTrIx+czXv5fZn247zuxz3qdywz2fyg337M6q2ddn4qM/z/96elMmTBna5Lx+gy/JgPw8tS9sypYm0+/Ojoatl0cPa+/q34Jh196cC+femzW183Pf0+Oy4NqjrALe8GSm3vNydg8Ym1n335HPDDs3fXquzT3nfTGPtXPOfn0HJdmUXDs9P7rnU8JeAAAAAAAAOIqu1wO4vV5bm42H+sy+noVz56c2SY8bxuSi1q7ZuykLv/9yDl3W79yG8LRv+vRJ+pRdnc/0SLJqQR6tPryuddvC+/M/a5P0GJerhiVJaS79TJLsyzNPv3yoT+2u1Uvyg+rGE/bO5X9xXXok+eE9/zOrGm+LvGNtnv7nmkPXbvvnH+XpDbsPXdd3YKEH8YB+vXOEYZ/KDYOT5EepXHi41+/e1fNz3zNJMiJXXXoM2zgnycBx+frkQUn2ZeUdt+Tuf36jyct7X1uWv7nqk5nUMN+ubZsK21BfOi4Vo85Nn55Jtm1qCOHbp8+n/zz/qUeSH8zN3OrG64jfyKtPv5TXNAAGAAAAAACAJrreCuDq+/NX1z55xOELvvRAvlHeKNSs/XH+qmx5Bl9wbiF43J2kx5/kG3dc0spK0r159f6vZEbl68nsj+SC8/pmx2ub8kaSwZPHFkLjPmNy5z1/kme/9vM89oXRWTR4aAbm9WzcsjvJoNz4/em5tGeS9M7lN9+cwc88ki2P3pKLnx6a8/q8no1bPpLBg5PGKWjPsin5xlXL85Vnn8zEUUsy+IJz03PvwTGH5s6ffC+T+63IzEn3ZmXuzczGc/b4k9xweUsreYfmpm9+IYuuezIrv/Zn+fg3h+a8fm/ktY2/yb70yOhvfiM3HPO20T1z0dfmZd6OqZm6aGt+OOk/5ocHt2beUZONbxS2vR5cvSk7JpybfsMuyYVZnjWLpuU/vNpQ87Zzc0Gz+297ykvypblj8swdKw4/7557s23j1uxOcsH0p/KjKUOtDAYAAAAAAIAGXW8F8L7fZOPGTUf829G80ezl0/P33xyb3ts2ZcvuHul7+ZfyxAvzcm2r2zH3zEVf+16e+PrYXNhndzZu3JRdfUbkM7O/lx99beShkHHghHn5l5/Myn+66CPZu2VTNm5JBl/1hXz7J4/n66MOR5E9R92RJ578Ukb37ZF9b9RkR5+xmVP1VP7+5hHN5u2ba+f/Uxbf/4X8x8HJlo2bsnFbj1z4mel5ovqpTB7WM+l3db7zkzm58apBSaM5//7Z1u+n56jpWV793dx51aD0fGNTNm7cnT4Xjc1dT/5TFkw4tu2fDzs3V839x/z8x7Ny41VD03fv1sLz39U7F1z1hcz58U+zfO6YwqrpgX+e7zx4XS7sneze0nD/T38vT0wflx7HMGO/a7+dnzW+942vp+dFY3PXkz/NEuEvAAAAAAAANNHtZ6t+eaAjB/x1TW1uuf6zHTnksVk9N+df92Ry+az8/JFxrbffBYred5/6Sc4vHdDZZQAAAAAAALRo1Mc+miRZvXr1iY81alSSrrgCGAAAAAAAAIAWCYABAAAAAAAAisRpnV1Ahxs1Pb9+bXpnVwEAAAAAAABwylkBDAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAARUIADAAAAAAAAFAkBMAAAAAAAAAAReK0zi7guL1Zkxefq8rzK2tSu6fhWK+PZPjo0bn2yk+k9OzunVoeAAAAAAAAwKnW9QLgt2qy/P7KLFi1O/uPeHF3VtRszYrvPZ5+l47PjDvKU3pmJ9QIAAAAAAAA0Am6VgBctzJzpv8wv9hZ+LX7gEG57MpP5LLSPkmSN2t+mRef25BXa9/JjlWL85+nbshX5345l5V0Ys3QkepezuMP/jhPv7I7+3Nazhr+ifz1HTdkVEnrK97Xz5uWmcuOPN69V+8MufiSVHxxfJvXAwAAAAAA0HV0nQD4rTWZfzD87V6Sz/+3L+cvR/Rpes4nLskV1+3Pm+t+nNn/7cVs3fnrfGt6Zc6aNznDrQSmq6uryoypi7N5fyG87df97exYvyqzp25I+X+bmSkjzmj7+u6npd/Zpx/6dc+bu/OrlSvyq5Ur8/FbvpwZ40rT6yTfAgAAAAAAACdXFwmAf5dVDz6Uqp1Jzjr/KKt6u+fsETfkW98tzf+44/G8tHNtZj9YnQXTy1oMt1pbHXlQ+b0PZMqI4yy7riozbl2czc0OD7n97sy55pyjXr5+3rTM3DI+8+8rT/+6qsy4tTpjHp6ZsS3e+/Ysv3N2KjePzKwlkzP8OEvmvWp7ls8thL8DPntH5tw6JL2yP9uWzM1//m5tqub+OGO+98UMbWuI0s9k9n3l6X/owK7ULF2Q2Q/+Or/67n2Z3b19n0sAAAAAAADeu7pGALztn/LEyiQ5PeXTb2vfls5nl+Wvp2/Ir+76ZXaufCbP31CWzw5s7eSSTG41WD0+h4PlpoHs+nnTMvPB2al4riHYbXWE7andkgy5cmThnPqabE5JJrZY45rMH/dQqjqufN5rtr2YRZuT5IJMvHFIwx8zdM/AcZ/L2B88kKd3rsqKdV/M0GP6Y4U+Kb3my5mzf1amfLcum7/7eF4sm57Lzj4J9QMAAAAAAHBKfKCzC2iPTUurU5skw/8s1x9tm9tGeoy4LhOHJ8lv89TS5utwT56D4W/5vQ9kUbPVuMOnPpBFSx7IojbD3ySpS83mZNDAworM+m11yZDSI6+pq8qMcQ+lKiNTfnWH3gbvIW+u25wdSXLxhRneo/ErwzLq0sJPL1Yf32e8/7jxKe+eZP/WPF29vdGkG7L8O3+XSROmpWLctFz/xb/Lgl/+puHFmiy6vXB81gu7mg741srMmTAtFeP+Ls+/mSS/yerH5uavb2gY54ZZ+V/Pbc6e46oWAAAAAACAtnSBAHh7Nq9/O0ly0dWX5NgWJ/bJpVcPSpL8bv2G1Hd4bS2oq8oTy5Jcfdvxbx2dJHV12ZqRuaxhjPqaumRwSdMA+OAW00PGZ/6SybnsBKbjva22prbwQ/8+R2xlPmBoYVn473b+NvuOa/RhGVVW+Gnzql8Xgtlt/5iv3vJAKp+vzZ4evdOv/2nJzto8/X//98xftz9JacZcNyBJ8uoPqrKt0WhvrlqZX+xPuo8uz2Vn78/6ef89sxduTe2+09Kvf+9031eXFfffnwW/3H9c1QIAAAAAANC6LrAFdF1qawo/9T+7T5KkfumsTHmwrs2rDvbZ7dVwTWrqUp8cZdXt0Rzss3vkPAetX7g4m1OSyRMuPK4Zmt/bzHHTGr36UCqWNZqzpDxzlpQfvva4ZqRo1O3KzhzPZ7x7eh1Mld96O3uS9BpYnsm3vJ3awZ/JFUMbvndLCltFVy2szl+OGJ2zR1+RT93/eF6qrU7VpusyaWiS7Mrq52qTnJ6x4y5Jj2zIi8+9naR3Pj93Tv5ycOGcbZt25eyh3TvgpgEAAAAAAGisCwTA7xUH++w26um7rjIVd81ORc1tWTT1whzs25uUZMDx9hO++LYsWnJOIQh+rqyhT3Bh7tz7wImtKoZ2OyNDr7khQxsd6V9akqQu2VaXN5P06vGJXDb68by08u08/8KGTBo6LKmrTtX6JL1G5lONL847qd+2PfsGn5Me6ZOBDaEyAAAAAAAAHasLBMB90r9/kvpkz579Sbqn/5V35vHR77R9WY9CwLRvT8M2s/0/krNaPbkulbdOS2WTYyWZ/PDMjG0IctfPaxb+JsmIyVl0b2Uq7noo80d3TDjbv+ScJNuz+rm6DLlyZGE1Z11dtqYkY05s+TLFrqRPG5/xtuzPnoMNec88vdEW0/vz5pZfZsWyl7P6lW2p31fYij31v8nOJAPTPZeOuzRnrFyV3y17PqtuHJYBq1Zmc5IBN1zREB4PS8UtA7Liwdq8dN/svHT/6fn46PJcf8OYDC+xAhgAAAAAAKCjdYEAuDRDLk6yLPnFyjXZV3ZJevQ4I716tOfa/Vm9cmOSpPvF52dgq+c1DXuPtCYvLktyddnh8PegEWUpz9pUrVyTKSOOd9lvc3Wp2ZwMurGwtXT9K9XZPKQsX+2o4elyBpQOSFKb1O8qbNHc6LXaTYUtw88468Np19fiCBuyurrw05BLzy+M/daGPH5XZf6h5ih/aDH0ilw/YFUeqd2YF1/ZnNIlv00yIJ8fffjb1v+av82CEdVZ/oPn83R1bX71/OLMXPkSvJqYAAAgAElEQVRyJs/72za+cwAAAAAAAByPD3R2Ae0x5OIL0j3J/pX/lBVtt/5tqm5F/mFl4cdPXjzsZJTWzDkZMDhJ6lJ7LHUesibzx01LxbiHUpWk6q5pqRg3rdATePPiTBk3LRV3Vun1+z509ogh6Zckr6zJ+n2NX9mQ1asKP11WNuS4xq5fsjhV+5N0H5Rrywp/dLDpBwvyDzXv5IyLx2TWvLn54ZIHsujekS1cPTCXXTcgSfLSdxdkeX3SfXR5Lju76Vm9BpalYvrfZsHC/567rzg92V+bx5dsbmE8AAAAAAAATkSXCIB7lH0uEwckSV0WzG1vALo9y+cuzuYkGTAm15edmu1mh48emaQulQvXHMfVF2bKoaBtZGYteSCLltydyUOSIbffnUVLHsii+8pjJ+j3oYGXpWJIkmzME49tTmHH5v3ZtuQfs3xPkrMuzZhj3oJ8V2qWficzvlv4a4Uht/xlQ3C7KztqC9s9D7/izzJ84Bnpkf3ZVtPyXzWcPbo8n+qepH53duT0jB13SZOVyPXVP87zW3Y1/NYnZ51d2Higf4k+wAAAAAAAAB2tC2wBnSQD89m7xqRq6orUbl6cv75je+6+94sZfmYrp7+1IQvueiBP1yTJhzPxruva2P65PS7MZVcnVcuqs37qhU23gV5Xnaok5aMvLPw+YnJmXT0tM5e10Re4bk3W58IMb2X72/ptdcmQsoagt+l20LxfnZOx08dnxdTF2fyT+zPp+d45q/vb2bHznaR775RPv66h524bap7J3bc8f+jXPW/uzu/2J8lp+fgtX86Maw5+xvpk0MUfTl75bX5x33/JpO+dnry5O3vO7p2zkuxsPm6PS3Lt1T/MSz95O+lflvLGhbxZlW/93YpszopUntU7Z+VgzQMy9lKfaQAAAAAAgI7WJVYAJ0kGXpc5/3Vkzkqyv2ZVZt54R2Z8pyqrt/wme97alT1v7Ur9lpez/DuzMvHGg+Hv6Sn/r9NTcWLpb5Jk+ITxGZK1mTmuMusPHlxXmYq71iZDxqeiUdA7fGph1W7VXc23bN6e5XdOS8WtD2XmrY3Gaaa+pi4ZXFIIgOvqsjUlKbXsl5LyzJl3cz5/ce9kz+7s2JmcNfzS3D1vdqaMOOPo1+9/Jzvqdx/6t79H73x89Jjc/fB9mT2utElf4YHjpuWro3une97JzjffTq+y8Znznb/NpEtbHrpXyelJkgHjypr+scXZ5bn7OxMyZvjpyc6DNY/MV++frv8vAAAAAADASdDtZ6t+eaAjB/x1TW1uuf6zHTlkE3u2VOV//d3i/OIo+0B3739+Jv3tbRk7uO1gbP28aZm5rPXXy+9tvIp3e5bfOTuVjVqXDrn97sy5ppWVjAcD4iZKMvnhmW2EX2syf9xDycF511Wm4q5k1pLJTVceN6hfOqvQI7gFbdYGHWZDFtzwQJ7eMyD/12N/myvOPvoVp8p3n/pJzi8d0NllAAAAAAAAtGjUxz6aJFm9evWJjzVqVJIuGAAX7Mq2F57JgoW/zK9q3s7+Q8dPy1mlAzNmwg2puHxgkxWNwMnx5nN/l7+6vzbdR9+cx6c37f/b2QTAAAAAAADAe9nJCIC7SA/g5vpk4OU3ZOblNxR+3bcre3J6evXo3rllwftOTVb8uDbJ6Rk77r0V/gIAAAAAALwfddEAuJkefaz2hU5RmooHH0hFZ5cBAAAAAABAkuQDnV0AAAAAAAAAAB1DAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJATAAAAAAAAAAEVCAAwAAAAAAABQJE7r7AKO1ZpX/zUrnq/Orzf/n/x/r9d3djnAcTh3QP989Px/nzFXlOXCiz7W2eUAAAAAAAAUjS4TAL/55q488t0f58WVv+zsUoAT9HptfV6vrc8LP/vfuezyS3LzX03I2Wf36eyyAAAAAAAAurwuswX0god/JPyFIvTiCy9nwcM/6uwyAAAAAAAAikKXCIBffOHlvPTiK51dBnCSvPTiK3nxhZc7uwwAAAAAAIAur0sEwMuXrezsEoCTzPccAAAAAADgxHWJAHjbtrrOLgE4yerrftvZJQAAAAAAAHR57/kAeM+et/NvO3d3dhnASfab3+zMH/7wbmeXAQAAAAAA0KW95wPgXr1O7+wSgFPg3XffzR/90Xv+vyQAAAAAAID3NGkLAAAAAAAAQJEQAAMAAAAAAAAUCQEwAAAAAAAAQJEQAAMAAAAAAAAUCQEwAAAAAAAAQJEQAAMAAAAAAAAUidM6u4ATMyazvn9dhp/Z6NC26lRMfbzTKgIAAAAAAADoLF08AF6RmX+xorOLAAAAAAAAAHhPsAU0AAAAAAAAQJEQAAMAAAAAAAAUCQEwAAAAAAAAQJEQAAMAAAAAAAAUCQEwAAAAAAAAQJEQAAMAAAAAAAAUCQEwAAAAAAAAQJHoEgHwuQP6d3YJwEnmew4AAAAAAHDiukQAXFo6sLNLAE4y33MAAAAAAIAT1yUC4PKrR3d2CcBJNvYa33MAAAAAAIAT1SUC4BEjh+RPr7i0s8sATpI/veLSDB8xpLPLAAAAAAAA6PK6RACcJDdNqkjv3r06uwygg53Zu1du/qsJnV0GAAAAAABAUTitswtorz59zsxjT34zq3+5If/8z7/I//Pr/5PXa+s7uyzgOPy7c/vn/CH/PmOuKMuFF32ss8sBAAAAAAAoGl0mAD5o1CeGZdQnhnV2GQAAAAAAAADvOV1mC2gAAAAAAAAA2iYABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSAmAAAAAAAACAIiEABgAAAAAAACgSp3V2Ae23PcvvnJ3Kzc2Pj8ysJZMzvBMqql86K1OeK8v8+8rTv4PHXj9vWmZuGX9Sxj4p1lWmYmVZFk29sLMr6QBrMn/cQ6k69Hv7PmPt/TysnzcrtRNmZmzJsc9Xv3RWpjxYd+j3IbffnTnXnNP2vdxZl4pGNbV7jHWVqbhr7eHfr76t1fe3/XU1/x6XZPLDjZ8FAAAAAAAAJ6ILBcBJi2HRuspUjJvVCSHSmix6riyTB1dndV35cc9dv7Qyqy+efMT1/UtLkmU1qU86PABubU6S1FVlxq3VGfPwA1nUJKCdldq2PmPrKjOlZnwW3XeUALyuKk9kfOaUHP59xq01mbjkgUxpXMO4ykxsFgKvnzctT5TenUVLzmlybMbS1kPg+qWLkxtnHvoMtXeMQ2H2ksmHP3/rKlNxZ90RAXf761qT+eMWp7SFZ7tcCAwAAAAAANAhuv4W0CMmZ9G9JalcuObUzruuOluvHJmxE8qy4iTM3f+amVnUSSub38/WL1ycQfc2DyMvzJSHy7JiblXqW7xqTebflcxqx+rn+ldqMmbCwfO2Z/nc6ox5uNn7XFKer95elyeWbj98bF1lZua2I4Le4VNvy6AHF2d9i7Ntz+qaslSMONYx1mTRgyWZ1Xwl84jJmX9ldb51nHWtn/dQ0tKzvbckK17ZHgAAAAAAAE5c1w+Ak2REWcqXVbcSgp0c61fWZczF5yQlIzNmy/HPXV9Td/STOlhnzNkl1FXliS3jDwemjZWUZ+Lg6qw+4tFtz/I7F6e0eYjbou1ZXVOaUYcC0LrUpKzR74f1H9j0YP22upSPbilgLknpkFamq1ubmtKRh7d+bucY9UsXZ+vt41u8n/7XjM+g59YeCsLbX9f21KaVZ5tks88kAAAAAABAh+hiW0C3YUhpo21uK5Opk5N50zJzWcPLjXuS1lVlxq2Lc6gNaRu9TVvUZBvfczLqyrosWpcMbyncam2uxseXTUtlkia9X9dVZsa28YWa11Wm4rHSVnrLrsn8cdW57NBq4WY9Vhvf29HmbJi3cd/Xlnu5NutZO2R85t/Y9IyT2R/5pKmvSa4c32q9/UuTJ17ZnrFNtkp+KCuuvO3wls5tWbc4NaMnZ+yhAxdmyn2tlLKtaSDa/5qZh7eIbqIuNZuTAS28sn5hTS6bWn7MY9TXJGMmtNZXuCSlWXxo2/NjqWvUhJY/C62HyAAAAAAAAByr4giA11WnanBZkyCqdums1Ix+IIumNj+3IUxd8kDT3qbz0u4QuP6V6gwaPfPQ7/2vGZ/cWZX65mFnm3OVZ86S8qyfNyu1E47S/3TE5MwaPC2L1pVnSrOQubBa87bCvbfQv7Z+6azMWFpSCHFL2p6zfumsQh/bJZObHJuxtPEWvy30ca2ryoxb1yZXlx2+rqYu2XxyehifLM1D1+b6DyxJtjU6UFeVb9WMz8TMTsW4hmNt/DHB+pXJZc0/jy3antXPlWTifa2FsI2sq87W28e3EMKuyYspayWcbWuM7and0tbJ52TA4KT2mOs6J/1b+Iwf+sxd055CAQAAAAAAOJouvwV0/dJZqbirLpMnNA7d1mZFbjsiLE22Z/nKFlbSjpic+aXVWd6uXWjXZNFzZc22sr0wlx2xPfD2LH+sLpOnHznXMa02bjB8wvhsXdm813BDUHgwnC0pz5wlTYPd/heXJY227G3dmiyqGX9Ebf2vmZmJNYd7uR4MnJuExyXlmXPvyKb1Tn2gS/YwHjSw7dD18FbF27N87uJsXvZQXhz9QBYtKfybX7o4FeMqj9wSvK4qL5a2vK1yc/VLH0rNje15dmsy/7HSfPWIFdpJ/dLqlE5oz+espTFKMqDNFc11qWnzA9V6XQetnzctFeOmZcqDJe3qnQwAAAAAAED7dLEVwHWpvPXg1sUNhozP/CXNt5YtKfTnPeLytVmxbHEqly1ucfTye5OUFMKpg1tHJ822QV5Xna0tbBM8fEJZnli4JmMPbbe8NitSlq+2Z2vg9igZmTFbHsryugsPh6/rFmfFleMzp83rSjIo7Ui211WnatnaVC1r6cWSTJ6QDC/ZntXPJWOmt2Nlahe1ddv2ZETr9zektOHh163Nihz52et/zczMz6x8a+n2Jltn179Sk9KLy3M09Utn5Vu5LXNa6ZV72OGtv49cYd3Qa/ioq2pbG6MutXXJ8FY/uyUpbXVZd1t1HTZ8asPq/LqqzBg3LYPufaCFP9gAAAAAAADgWHWxALgkkx8+ynbJR9OOfr+HwqkWrF+5NpuXrU3Fgy29OjLrp154eOXm4JIO3P74nIy9sSQzGvWgXb+yrsVerfVLZ2XKg41C3yHjU9GOGVru99vc0VaHdl1HbPHcTJMtotvoF9z/4rJkYV2Sw9tmL3quNBVHC2TXVRbC36O+B9uz/M7GfZ+bj7M4K0rHN+o1fCxjHG2L57a2iD5KXS0pKc+ch5MZc1vYQh0AAAAAAIBj1sUC4A6wpe74+9LWVeWJLS2tOC6oXzori9Ylww+uZDyRuVoyoiyD7lqc9ddMzvC6qjyR8ZnTOIytq8qMWxcnt9+dRUsa9ey9s117Wzdsb1y8q3uPqn9p8tja1F9zTsvvb00OBe712+ra3i668Xu/rjq5se0VsVlXmYqVZVk0tT3h70PJ9JmthqzrVyYT2xyn7TH6lyZPNPpDg6bqUpOyVBzxRwBHqauuKvNfGZkpLY1ZUpJBm6u7VL9oAAAAAACA96ou3wP4mJSMzJg079XbfvWvVGfQja2vUux/cVm2PlZV6Ld7gnO17MJU3F6XF9c11DK66Urm9QurM+bhB9qxgrQFI8pSvqz6yN61TZyTAYPX5sV1xz58l1BSnomDF2dRS/dXV5UntpRlVEPw2f/ishZ6Mjeor0muHNnwOdme5Y8ll7W1vfGh8PdovXAPh6ytroKvq8oTKWtjBe7Rx+h/zfgMenBxi5+F+qWLs/XQvR1DXUm2ttaLuq4uW69uq2YAAAAAAADa6/0VADdso1x5a2WzcGt7lt85K8vbDGvXZNGDJW0HeSXlmTj4YOjbMNfcqqahV11VZsxrHBzWpabFVKxlheCxMoueK0tFs1r6l6bZWIVgruqIUVqasxAuz7yzWb1Zk/njDj+v4RPGZ+tdzZ7fuspU3LW2yVX1S2el4oix3vsK99f8s7Am82+tzpjpjcL/kvJMzOIWPjNrMv+uZOLBEL5ubWquHN96uNmR4W8KvYbHTGhtrPaN0epnYV1lpjxXlq82+QODdo5ZUp6vXlmdKfOah+YNz7bVmgEAAAAAADgW778toEdMzqKHqzJj3LRsPnTw6L2F65cuTtXV4zPlKMMPH12SmXOrMuq+8vQfMTmLbqxMxbhph08YMj7z7zscdg2fMD5P3DqtoUdvO3ocl5RnYqbliRb6z/a/5raU3jktFYdurCSTH747kxc2DWdbm7P/NTOzaGCzejMysxr3dC0pz5x7m51z9W1Z9HBpZiw8fKi+pi7ZXNP1tvUtKc+cJSWZP25ao77JIzNryZFbGw+feltqmzzvg+cefl7rF1andEJ5y3MdCs7XpmJZC68PGZ/595Wnf7Zn+Z2zU7k5ya3TUtnCqeX3PpApI9rqNdzeMQo/t/hZuPq2LLqvcVB7HGOuq0zFuIcandHyswUAAAAAAOD4dPvZql8e6MgBf11Tm1uu/2xHDgldU11VZiwsyZyjru7tGPVLZ2XRwJmHAleS7z71k5xfOqCzywAAAAAAAGjRqI99NEmyevXqEx9r1Kgk78cVwHCqlJRnztRTN13/a2YedYU6AAAAAAAAxe2kBMDv7H8nj3/vh/9/e/cXY3WZ3gH8q9JNL2T6R8OgmF2YVJRk0EiCgtULSzpoZsM/u6UmROqF4DI3pGFT0JGmIyJJTbM3ww7axIydxJAWKmMoMgnrpjUga4sFTsIuNgMxonMmmu2CmzSbLvZijsOZ4ZyZAQ4d5vTzSSaZ8/7e9/09Z+bym+d9807vu7nw1a/y+WcD1+M1TNAdd85Mw/Rb0/rdljy99qlM+y25PwAAAAAAANSjmieBv/mf32TZd/8sn3xyLvk6yU21fgNX6vPPBvL518nPfv6f+cd/2Jfe/bszbdotk10WAAAAAAAAUGM313rD//jw34bC30T4eyO5aejf8ckn59Lz97snuxoAAAAAAADgOqh5AHzqoxNDnb/csHrf/ufJLgEAAAAAAAC4DmoeAP/3r3+t8/cGd/6rX+XixYuTXQYAAAAAAABQYzUPgL/6r1/WektqbOCzgdx8c83/9QAAAAAAAMAkkwICAAAAAAAA1AkBMAAAAAAAAECdEAADAAAAAAAA1AkBMAAAAAAAAECdEAADAAAAAAAA1Ilpk10A3IgGD3TkuR8Vhz/P/f6L2fHEzAmsPJ6uZa+lb/jzfenoXZ/msZac3JVV3XPS9WpLZtSsvoEc3PRSdp0eY5PH12Xvhvsn+EYAAAAAAACmAgEwjFLY2ZaeOS9mb+/MEWObD4wTAhf7svnZD/LY653Z2/jN4PF0LevIude3Zmnj5UsGD3TkuTONabnC+rZmXfb2XgpvBw90ZNXO5WWB7swsfbUzS6vu0ZFzTwp/AQAAAAAA6o0joKHcyV3ZmnWXBb3NG9Zl9qETGRxjaWHPvsx+eXTQe3+ee31R3vubvsvWFna25W+zLns3LJp4fcW+9PQvT9eozt0ZT2xNR15L18kJ7pHlFQNpAAAAAAAApjYdwFBm8NNkfbXO2NNnMphUPqa5FMz+xYYKzxpbsqapIx8VW4ZD18EDHXn/0c7smJ8kxQqLKivs2ZfZazsr1tD85PL07DmezB+7s7ew54M89uTWCb8TAAAAAACA6+uBBx6o2V46gKHcgiqdscVizj6+6NJdvsW+bF7WkYPfZLeDZ5Il91W9w3fGnOS9YwOXPj+xNc/NH7+cws62rNp5vPRpIOf678sj1dY1Nmb2ux+kMNaGE+n+Lfal68BA6Tu2ZdU3P8N1DBk8sCsHiwM5uOnSnM0HBkrPOi6tW7Zr7JoAAAAAAACoGR3AUGZGY4U7fot92fzsmazpLbupd/BMTqeY2YNJGpPBT8fu4p1xV2Py6ZVWM5Bz/UlSLHUeF3PmdDKr6vzGzJk79o4T7f49+6OXsmru8nT1Xuo2HrpnOGX3DBez69nXsr7szuPCzo4cPNCY97Lu0h3KJ3dl1aa+dL3aUjUgBwAAAAAAoDYEwFDNyV1Z9cKJJEnLy52Xun+TZP767O0dOX32XRXC4zKnzxSTjD1npJlZ+mpnlpYPzZ0zTohazLli0lyxi3mo+3fHRO7+fXxdWdA7ZMYT67J+074Ucv/w36Jl1J3HzY82Zmv3nHS9WvY95y/P+uyrfnw2AAAAAAAANTPFAuD29J5qTVP5UP/+NLdum6yCqGfDIW/pmOOmy0PRcmc/HUjmVw94586ZSPI6jrHuIU6SNGZWlddc+92/MzOraYyAOUlmzMncpsYK9Y2zDgAAAAAAgJqYOncAP92Zw6da03T+WHbMW5zmeYuz46cXkqbWFPa3T3Z1NbOmuy+Fo51ZM9mFUGZmlr76Ytb377t05+8oM+4aO9kc74joiRnviOehI6IrP+pLT/+iPHDNAWwxZwavdQ8AAAAAAACulykSAK/OG20L0nD+WHY81Jae0mjP2pY0z1usA5gaGcjBnX2pnG8Odb9WDT9nzEkOnaiyNhk8kzy24EqOf65Ww4m8f7LK42IxZx9fNPKo6pLCnn2ZvbYWd/A2Zo5znAEAAAAAAG5YUyQAvju3NST54vPh8Lde3Xv79Mku4f+3/g/yUcVm3YGc678vj8yvsq6xJWua9mVvpXC2Zt23SfOTy3O2u3JIXdizL7MfrXBEdbEvPf3Ls6pa7RN2PO+/W/2IaQAAAAAAACbfFAmAP86X55M0taZ3+1jz2tN76kgOd68eOfx0Zw6PGF+dN46WPpeeFUo/I9dOdF7J9reGnw/9vJXRvcnb9h8ZOrK6fL+jnVlTWruiKUnDgmwuPRv7+1JbM7P0B4vy3rO7Uhj1pLDzpby3ZPml7tpiXzYv6xhxJHTzk8tz9oWOUcdEH0/Xsx/ksR9cXfdtYWdbVu08fmmgFDQ/Vz6WZPBAR7ZmXZ6rEPJeVffvu6+la0SYPZCDm15LXl5fscMYAAAAAACAG8O0yS5gYnbnmUMrUlg5O00rj6SwMkn//ms++rnhwY0pPHg2b89bnPYMhbMrHtyYw93Jw2t3X9G8Nd192fzg9Jz/6Q9LY6vzxtGNWXGqL7Neackzb5a9uKk1hS0X8uEri0eM9zw/tGZhRh51zf+hxpbs6D2ermVt2Vo23PJyZ3aUh6uDZ3I6xcweTNJYvrYxXcvasmp44n3p6N1aITQdyMFNL2VX2Z29fcv2Df3y+Lrs3XB/hrqOk6SYwWQ4wG3e0JmuAx1Ztey14bVzv/9i9m6ocMT0yV3Z2r88XRsm+gfIcA2P/GtbVr1waajl5c6KATMAAAAAAAA3jpt+cvTfv67lhm1r22q53UhPd+bwlgVpKB8bEQS3p/dUa24fDmFHrsuocPbyoLU03nA2b897Ku0TnXfZ/qPmla3ftv9IVjRdyIejQ+Eq86+Xwqkj13F3prRiXzbvacyODRWOk55i/m73O7l7zqzJLgMAAAAAAKCiB+79g5rvOUWOgC55sy0Pz1uc5nmL0/xPZ4fGmlqHjlSuid059LMLSW7LrKcnPm/NkrvTkAv5+aHdlec13J0lI/b7MucuC38BAAAAAAAArs3UCoDLPf9UmuftT3+S3H5H1kx2PQAAAAAAAACTbIrcAVzNx/nyfNI02WVAPWlsyY4rvTMYAAAAAACAG8KU6QDetr3SMc9357aGJF98PuK+3Ibb777Kt6zOknunJ+c/zqExj2geOa/n0Mc5n+m5Z8nqq9wPAAAAAAAA4NpNiQB4TXdfVqxsTeFUX94Yvku3Pb2nWtOUs3m7dVtpbFtO9Cdpak3v9tLQ9rdS2LIgDZU2bliQzcP3B6/OG0c3ZmFD0n+obUSgPO68N9vy4/6k4cGNOdy9evz9qtqdc19k+M7gNd1vlX1fAAAAAAAAgLFNiSOge9a2pKcU+C7cciSFLaUH549lx0Mjw9X21h9m1tGNWbjySAorS3PmvZ0lRzfmntEbnz+WD9OawqnW0sCFfPhKS54Z3a07gXntrYvTvv2tFFZuTOHUxtLo2bw976lU6l2upn33sfzRlgVZuOVIFibJ7e3Jm9vGWwYAAAAAAAAwNQLgIduybN5EgtDdeeah3ZeN9lQYS5JDrYvzzAR2ndC8559K8/NjT2lvXTx2IPxmWx52XDQAAAAAAABwFabEEdAAAAAAAAAAjE8ADAAAAAAAAFAnptAR0LVU+Zjoq58HAAAAAAAAMPl0AAMAAAAAAADUCQEwAAAAAAAAQJ0QAAMAAAAAAADUCQEwAAAAAAAAQJ0QAAMAAAAAAADUCQEwAAAAAAAAQJ0QAAMAAAAAAADUCQEwAAAAAAAAQJ0QAAMAAAAAAADUCQEwAAAAAAAAQJ2oeQB86+/+Tq23pMZm3tGYixcvTnYZAAAAAAAAQI3VPAD+7W99K/m61rtSSw3Tb83NN2v+BgAAAAAAgHpT8xSwad49+fqmWu9KLf1xy2OTXQIAAAAAAABwHUyr9YYPPfqH+fjEyfziF7+s9dbUwO/f9nt5dv2fT3YZAAAAAAAAQBVr164dd053d3fF8Zp3AN8y7Za89y/7870/XZFvf+eu3HHnzFq/git0x50z8+3v3JU/+d7y/Pgn72TatFsmuyQAAAAAAACgimrh7kSe17wDOEmmTbslf/XXf3k9tgYAAAAAAACoe93d3RU7gccLh2veAdK013oAAACKSURBVAwAAAAAAADAtRsd9o4X/iYCYAAAAAAAAIAb1jeh70TC30QADAAAAAAAAHBDm2j4mwiAAQAAAAAAAOqGABgAAAAAAACgTgiAAQAAAAAAAOqEABgAAAAAAACgTgiAAQAAAAAAAOqEABgAAAAAAACgTgiAAQAAAAAAAOqEABgAAAAAAACgTvwvSvPwsTX16TMAAAAASUVORK5CYII=' data-featherlight='image'><span class='label grey badge white-text text-white'>base64-img</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 22, 2023 10:58:49 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 22, 2023 11:04:18 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 5m 28s+252ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Device Name</td>
+								<td>Google</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 1,
+				passChild: 0,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 1,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "verifyAddReminderModalGeneralDisplay":304.742
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+            
+            
+                $(document).ready(function() {
+                });
+            
+		
+		</script>
+	</body>
+</html>

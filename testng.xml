@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
+<suite name="Suite">
+=======
+<suite name="Web">
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+<!-- 	<parameter name="Env" value="${env}"></parameter> -->
+	<parameter name="Env" value="sit"></parameter>
+<parameter name="browserType" value="chrome" />
+	<parameter name="url" value="https://www.google.com/"></parameter>
+	  <test thread-count="5" name="Test">
+	    <classes>
+	       <class name="com.hrsAPI.test.HrsApiTest">
+<<<<<<< HEAD
+ 		 <methods>
+			<include name="verifyMedicationMasterListPulledFromGatewayEndpoint"/>
+			
+		</methods> 
+=======
+ 	 	<!--  <methods>
+			<include name="verifyNewMedicationFromEMRModalNotificationsReconciled"/>
+			
+		</methods>  --> 
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+ 		</class>
+ 		 </classes>
+	  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android" parallel="false" thread-count="1">
+
+<parameter name="browserType" value="chrome"/>
+<parameter name="url" value="https://www.google.com/"></parameter>
+
+	<listeners>
+		<listener class-name="com.utility.ExtentReporter" />
+	</listeners>
+
+	 <test name="HRS">
+		<parameter name="portno" value="4723"></parameter>
+		<parameter name="deviceName" value="RZ8W3003SQL"></parameter>
+	<classes>
+		<class name="com.hrs.test.ClinicianConnect">
+<<<<<<< HEAD
+		 <methods>
+				<include name="verifyAddMedicationFrequencyOnceDaily"></include>
+				</methods>
+=======
+ 	<!--  <methods>
+			<include name="verifyPatientConnectMobileLoginCodesLoggingIntoPCM"/>
+			
+		</methods>  --> 
+	
+	
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+		</class>
+	
+ 		<!--  <class name="com.hrs.test.xyz"/> 
+ 	 	<class name="com.hrs.test.abc"/>-->
+	</classes>
+	
+	</test>
+	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+</suite>
+
+	

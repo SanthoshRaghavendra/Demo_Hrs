@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Android" duration-ms="354451" started-at="2023-06-26T20:10:48 IST" finished-at="2023-06-26T20:16:42 IST">
+    <groups>
+    </groups>
+    <test name="HRS" duration-ms="354451" started-at="2023-06-26T20:10:48 IST" finished-at="2023-06-26T20:16:42 IST">
+      <class name="com.hrs.test.ClinicianConnect">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String, java.lang.String)[pri:0, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="beforeMethod" is-config="true" duration-ms="17366" started-at="2023-06-26T20:10:58 IST" finished-at="2023-06-26T20:11:15 IST">
+=======
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-30T14:25:54 IST" name="Web" finished-at="2023-06-30T14:26:12 IST" duration-ms="18639">
+    <groups>
+    </groups>
+    <test started-at="2023-06-30T14:25:54 IST" name="Test" finished-at="2023-06-30T14:26:12 IST" duration-ms="18639">
+      <class name="com.hrsAPI.test.HrsApiTest">
+        <test-method is-config="true" signature="logging()[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:25:54 IST" name="logging" finished-at="2023-06-30T14:25:54 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logging -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:25:54 IST" name="setUp" finished-at="2023-06-30T14:25:54 IST" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyEndpointTestingConfirmAllMedGatewayEndpointsareExposed(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:25:54 IST" name="verifyEndpointTestingConfirmAllMedGatewayEndpointsareExposed" description="T2896359" data-provider="allMedGatewayEndpointsAreExposedInquireAPIResponse" finished-at="2023-06-30T14:25:59 IST" duration-ms="5004" status="PASS">
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T2896359]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rudra]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Maharudra@123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyPatientListGeneralDetailsDisplay()[pri:1, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="verifyPatientListGeneralDetailsDisplay" duration-ms="74664" started-at="2023-06-26T20:11:15 IST" finished-at="2023-06-26T20:12:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPatientListGeneralDetailsDisplay -->
+        <test-method status="PASS" signature="verifyMetricsTabGeneralDisplay()[pri:2, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="verifyMetricsTabGeneralDisplay" duration-ms="181533" started-at="2023-06-26T20:12:30 IST" depends-on-methods="com.hrs.test.ClinicianConnect.verifyPatientListGeneralDetailsDisplay" finished-at="2023-06-26T20:15:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMetricsTabGeneralDisplay -->
+        <test-method status="PASS" signature="verifyAddReminderModalGeneralDisplay()[pri:3, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="verifyAddReminderModalGeneralDisplay" duration-ms="23412" started-at="2023-06-26T20:15:32 IST" depends-on-methods="com.hrs.test.ClinicianConnect.verifyMetricsTabGeneralDisplay" finished-at="2023-06-26T20:15:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddReminderModalGeneralDisplay -->
+        <test-method status="PASS" signature="verifyAddMedicationFrequencyOnceDaily()[pri:4, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="verifyAddMedicationFrequencyOnceDaily" duration-ms="46018" started-at="2023-06-26T20:15:56 IST" depends-on-methods="com.hrs.test.ClinicianConnect.verifyAddReminderModalGeneralDisplay" finished-at="2023-06-26T20:16:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddMedicationFrequencyOnceDaily -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.hrs.test.ClinicianConnect@fba92d3]" name="afterTest" is-config="true" duration-ms="803" started-at="2023-06-26T20:16:42 IST" finished-at="2023-06-26T20:16:42 IST">
+=======
+        </test-method> <!-- verifyEndpointTestingConfirmAllMedGatewayEndpointsareExposed -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:25:59 IST" name="getResult" finished-at="2023-06-30T14:25:59 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEndpointTestingConfirmAllMedGatewayEndpointsareExposed status=SUCCESS method=HrsApiTest.verifyEndpointTestingConfirmAllMedGatewayEndpointsareExposed(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="verifyMedicationMasterListPulledFromGatewayEndpoint(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:25:59 IST" name="verifyMedicationMasterListPulledFromGatewayEndpoint" description="T2896358-API" data-provider="getMedicationMasterListPulledFromGatewayAPIResponse" finished-at="2023-06-30T14:26:07 IST" duration-ms="7969" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T2896358]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rudra]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Maharudra@123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2088]]>
+              </value>
+            </param>
+          </params>
+>>>>>>> ca3e1b056268130abccbc924d010473b09e61212
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMedicationMasterListPulledFromGatewayEndpoint -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:26:07 IST" name="getResult" finished-at="2023-06-30T14:26:07 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMedicationMasterListPulledFromGatewayEndpoint status=SUCCESS method=HrsApiTest.verifyMedicationMasterListPulledFromGatewayEndpoint(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method signature="verifyNewMedicationFromEMRModalNotificationsReconciled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:26:07 IST" name="verifyNewMedicationFromEMRModalNotificationsReconciled" description="HRS_API-T2896362" data-provider="getNewMedicationFromEMRModalNotificationsAPIResponse" finished-at="2023-06-30T14:26:12 IST" duration-ms="4819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T2896362]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rudra]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Maharudra@123456]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Rudra Android10]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1683186259]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[168]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[88fYk46MqpLEOvF7S8kU]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[ok]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewMedicationFromEMRModalNotificationsReconciled -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:26:12 IST" name="getResult" finished-at="2023-06-30T14:26:12 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyNewMedicationFromEMRModalNotificationsReconciled status=SUCCESS method=HrsApiTest.verifyNewMedicationFromEMRModalNotificationsReconciled(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.hrsAPI.test.HrsApiTest@297ea53a]" started-at="2023-06-30T14:26:12 IST" name="tearDown" finished-at="2023-06-30T14:26:12 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hrsAPI.test.HrsApiTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Web -->
+</testng-results>
